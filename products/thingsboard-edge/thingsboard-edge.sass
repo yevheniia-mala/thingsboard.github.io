@@ -48,13 +48,27 @@
         line-height: 40px
         font-size: 16px
         padding: 0 15px
-        border: 1px solid white
-        background-color: transparent
-        transition: 0.6s
+        transition: all 0.3s ease
+        border: 2px solid white
+        color: white
         text-shadow: 0 0 18px rgba(0,0,0,.66)
         &:hover
-          background-color: white
-          color: $dark-grey
+          transform: scale(1.08)
+          background-color: rgba(255,255,255,0.15)
+        &:first-of-type
+          background-color: rgba(255,255,255,0.45)
+          &:hover
+            transform: scale(1.08)
+            background-color: white
+            color: #009688
+            text-shadow: none
+        &:last-of-type
+          background-color: transparent
+          &:hover
+            transform: scale(1.05)
+            background-color: white
+            color: #009688
+            text-shadow: none
       .learn-tb
         cursor: pointer
         line-height: 40px
@@ -146,19 +160,46 @@
       font-size: 18px
 
     #intro
-      margin-bottom: 80px
-      padding-top: 98px
+      margin-bottom: 60px
+      padding-top: 25px
       color: #212924
       .intro_title
         padding: 0
-      .labeling
-        margin: 48px 0 102px
         text-align: center
-        color: #A5A5A5
-        font-size: 20px
-        line-height: 1.5em
-        font-weight: normal
-        padding: 0
+        margin-bottom: 64px
+      .stats-container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        gap: 40px
+        max-width: 1200px
+        margin: 0 auto
+      .stat-block
+        flex: 1
+        text-align: center
+        padding: 32px 20px
+        position: relative
+        &:not(:last-child)::after
+          content: ''
+          position: absolute
+          right: -20px
+          top: 50%
+          transform: translateY(-50%)
+          width: 1px
+          height: 60px
+          background: linear-gradient(to bottom, transparent, #E0E0E0 20%, #E0E0E0 80%, transparent)
+      .stat-number
+        font-size: 64px
+        font-weight: 700
+        color: #009688
+        line-height: 1
+        margin-bottom: 12px
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Poppins, sans-serif
+      .stat-label
+        font-size: 18px
+        font-weight: 500
+        color: #757C76
+        line-height: 1.4
 
     #matrix
       margin: 80px -100% 0
@@ -263,54 +304,147 @@
               font-size: 11px
               img
                 width: 32px
-    #products
-      margin-bottom: 143px
-      #typical-usage-scenario
-        font-size: 42px
-      #background
-        .main2
-          height: 877px
+    #product
+      padding: 40px 0
       .product-title
         text-align: center
-        margin-bottom: 72px
-      .product-list
+        margin-bottom: 80px
+        font-size: 42px
+        font-weight: 600
+        color: #212529
+      .scenario-wrapper
+        max-width: 1400px
+        margin: 0 auto
         display: flex
         gap: 40px
         align-items: flex-start
-        @media screen and (max-width: 1450px)
-          flex-direction: column
-        div
-          width: 100%
-          display: flex
-          flex-direction: column
-          align-items: center
-          gap: 40px
-          padding: 40px
+      .scenario-tabs
+        flex: 0 0 320px
+        display: flex
+        flex-direction: column
+        gap: 12px
+      .scenario-tab
+        padding: 20px 24px
+        font-size: 20px
+        font-weight: 500
+        line-height: 1.4
+        color: #212529
+        background: white
+        border-radius: 12px
+        cursor: pointer
+        transition: all 0.3s ease
+        text-align: left
+        border: 2px solid transparent
+        &:hover
+          background: #F5F7FA
+        &.active
+          background: #009688
+          color: white
+          box-shadow: 0 2px 8px rgba(0,0,0,0.08)
+          .tag
+            color: white
+            border: 1px solid white
+            background: transparent
+        .tab-name
+          display: block
+          margin-bottom: 12px
+        .tab-tags
+          display: grid
+          grid-template-columns: 1fr 1fr
+          gap: 8px
+        .tag
+          display: inline-block
+          padding: 6px 14px
+          font-size: 13px
+          font-weight: 400
+          color: #009688
+          background: transparent
+          border: 1px solid #009688
           border-radius: 6px
+          transition: all 0.2s ease
           text-align: center
-          background-color: white
-          box-shadow: 0 50px 50px -20px rgba(0,0,0,0.15), 0 0 30px 0 rgba(0,0,0,0.05)
-          @media screen and (max-width: 1450px)
-            gap: 30px
-            padding: 30px
-          p
-            font-size: 16px
-          h4
-            font-size: 40px
-          &:first-of-type
-            p
-              margin-bottom: 45px
-          &.main
-            height: 820px
-            h4
-              font-size: 55px
-            p
-              font-size: 18px
-              margin: 0
-            a
-              padding-top: 20px
-              color: #009688
-              font-weight: 500
+      .scenario-category
+        display: none
+        flex: 1
+        &.active
+          display: block
+        div
+          background: white
+          border-radius: 16px
+          padding: 48px
+          box-shadow: 0 2px 12px rgba(0,0,0,0.08)
+          border: 1px solid #E8EBF0
+        h3
+          font-size: 28px
+          font-weight: 600
+          color: #212529
+          margin-bottom: 32px
+          text-align: center
+        img
+          display: block
+          max-width: 100%
+          height: auto
+          margin: 0 auto 32px
+          border-radius: 8px
+        p
+          font-size: 16px
+          line-height: 1.6
+          color: #3D3D3D
+          margin-bottom: 24px
+          text-align: left
+        a
+          display: inline-block
+          color: #2A7DEC
+          font-size: 16px
+          font-weight: 500
+          text-decoration: none
+          transition: color 0.2s ease
+          &:hover
+            color: #1e5fb8
+            text-decoration: underline
+      @media screen and (max-width: 1200px)
+        .scenario-wrapper
+          gap: 32px
+        .scenario-tabs
+          flex: 0 0 280px
+        .scenario-tab
+          font-size: 18px
+          padding: 18px 20px
+      @media screen and (max-width: 960px)
+        padding: 60px 0
+        .product-title
+          font-size: 36px
+          margin-bottom: 48px
+        .scenario-wrapper
+          flex-direction: column
+        .scenario-tabs
+          width: 100%
+          flex-direction: row
+          justify-content: flex-start
+          flex-wrap: wrap
+        .scenario-tab
+          flex: 1
+          min-width: 150px
+          text-align: center
+        .scenario-category div
+          padding: 36px 28px
+      @media screen and (max-width: 600px)
+        padding: 40px 0
+        .product-title
+          font-size: 28px
+          margin-bottom: 36px
+        .scenario-tabs
+          flex-direction: column
+        .scenario-tab
+          width: 100%
+          text-align: left
+        .scenario-category div
+          padding: 28px 20px
+        .scenario-category h3
+          font-size: 24px
+          margin-bottom: 24px
+        .scenario-category p
+          font-size: 15px
     #minimal-requirements
       main
         #background
@@ -641,3 +775,37 @@
         padding-top: 40px
       #local-alarms #background .main2
         height: 485px
+
+  @media screen and (max-width: 960px)
+    .stats-container
+      gap: 30px
+    .stat-block
+      padding: 24px 16px
+      &:not(:last-child)::after
+        height: 50px
+    .stat-number
+      font-size: 48px
+      margin-bottom: 8px
+    .stat-label
+      font-size: 16px
+
+  @media screen and (max-width: 750px)
+    padding-top: 60px
+    margin-bottom: 60px
+    .intro_title
+      margin-bottom: 48px
+    .stats-container
+      flex-direction: column
+      gap: 40px
+    .stat-block
+      width: 100%
+      padding: 24px 20px
+      &:not(:last-child)::after
+        display: none
+      &:not(:last-child)
+        border-bottom: 1px solid #E0E0E0
+        padding-bottom: 40px
+    .stat-number
+      font-size: 56px
+    .stat-label
+      font-size: 17px

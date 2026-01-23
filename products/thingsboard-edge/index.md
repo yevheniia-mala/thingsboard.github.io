@@ -6,9 +6,86 @@ description: Comprehensive software solutions for edge computing, providing data
 
 <section id="intro">
 	<main>
-		<h1 class="intro_title">Introducing ThingsBoard Edge: Our software solutions specifically designed for edge computing, delivering exceptional performance and efficiency where you need it most </h1>
-        <p class="labeling">With ThingsBoard Edge, data analysis and management happen right at the source, where your data is generated. This powerful solution ensures seamless synchronization with the ThingsBoard server, perfectly tailored to your business needs. Enjoy the flexibility to connect to public ThingsBoard servers like <a href="/docs/user-guide/install/installation-options/?ceInstallType=cloud" target="_blank">thingsboard.cloud</a> or <a href="/docs/user-guide/install/installation-options/?ceInstallType=liveDemo" target="_blank">demo.thingsboard.io</a>, or integrate it with your own <a href="/docs/user-guide/install/installation-options/?ceInstallType=onPremise" target="_blank">on-premise installations</a>, whether using <a href="/docs/edge/getting-started-guides/what-is-edge/" target="_blank">Community Edition (CE)</a> or <a href="/docs/pe/edge/getting-started-guides/what-is-edge/" target="_blank">Professional Edition (PE)</a>. Experience enhanced efficiency and real-time insights like never before!</p>
+        <div class="stats-container">
+            <div class="stat-block">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Years in Edge domain</div>
+            </div>
+            <div class="stat-block">
+                <div class="stat-number">150+</div>
+                <div class="stat-label">Clients</div>
+            </div>
+            <div class="stat-block">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Devices per Edge</div>
+            </div>
+            <div class="stat-block">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Data processed on-site</div>
+            </div>
+        </div>
 	</main>
+</section>
+
+<section id="product">
+    <div id="background">
+        <div class="main1"></div><div class="small1"></div><div class="small2"></div><div class="small3"></div><div class="small4"></div>
+    </div>
+    <h2 class="product-title">IoT Deployment Architecture</h2>
+<div class="scenario-wrapper">
+    <div class="scenario-tabs">
+        <div class="scenario-tab" onclick="switchProductTab('gateway')">
+            <span class="tab-name">IoT Gateway</span>
+            <div class="tab-tags">
+              <span class="tag">Device connectivity</span><span class="tag">Data routing</span>
+              <span class="tag">Multi-protocol support</span><span class="tag">Legacy device integration</span>
+            </div>
+        </div>
+        <div class="scenario-tab active" onclick="switchProductTab('edge')">
+            <span class="tab-name">Edge</span>
+            <div class="tab-tags">
+              <span class="tag">Local processing</span>
+              <span class="tag">Offline operation</span>
+              <span class="tag">Low latency</span>
+              <span class="tag">Remote sites</span>
+              <span class="tag">On-premises analytics</span>
+            </div>
+        </div>
+        <div class="scenario-tab" onclick="switchProductTab('server')">
+            <span class="tab-name">Server</span>
+            <div class="tab-tags">
+                <span class="tag">Cloud infrastructure</span>
+                <span class="tag">Centralized platform</span>
+                <span class="tag">Multi-tenancy</span>
+                <span class="tag">Scalable architecture</span>
+            </div>
+        </div>
+    </div>
+    <div id="scenario-cat-gateway" class="scenario-category">
+        <div>
+            <h3>IoT Gateway</h3>
+            <img src="/images/edge/tb-edge-gw.webp" alt="ThingsBoard Gateway block" width="315" height="419" loading="lazy">
+            <p>The IoT Gateway collects, processes, and routes data from local area networks (LAN) to the Edge or Server. It acts as a critical bridge, facilitating seamless communication between IoT devices and larger network infrastructures.</p>
+            <a href="/docs/iot-gateway/what-is-iot-gateway/" target="_blank">What is ThingsBoard IoT Gateway?</a>
+        </div>
+    </div>
+    <div id="scenario-cat-edge" class="scenario-category active">
+        <div>
+            <h3>Edge</h3>
+            <img src="/images/edge/tb-edge.webp" alt="ThingsBoard Edge block" width="915" height="600" loading="lazy">
+            <p>ThingsBoard Edge processes and visualizes data directly at the network edge, offering immediate insights and reducing bandwidth demands by minimizing the volume of data transmitted to centralized servers.</p>
+            <a href="/docs/edge/getting-started-guides/what-is-edge/" target="_blank">What is ThingsBoard Edge?</a>
+        </div>
+    </div>
+    <div id="scenario-cat-server" class="scenario-category">
+        <div>
+            <h3>Server</h3>
+            <img src="/images/edge/tb-cloud.webp" alt="ThingsBoard Cloud block" width="1010" height="600" loading="lazy">
+            <p>The ThingsBoard Server provides robust data processing and storage solutions, along with advanced analytics capabilities. It supports a wide range of deployments, from on-premises to cloud-based, ensuring flexibility and scalability for diverse enterprise needs.</p>
+            <a href="/docs/getting-started-guides/what-is-thingsboard/" target="_blank">What is ThingsBoard Cloud?</a>
+        </div>
+    </div>
+</div>
 </section>
 
 <section id="local-deployment">
@@ -262,33 +339,6 @@ description: Comprehensive software solutions for edge computing, providing data
     </table>
 </section>
 
-<section id="products">
-    <div id="background">
-        <div class="main2"></div><div class="small5"></div><div class="small6"></div><div class="small7"></div>
-    </div>
-    <h3 class="product-title">Typical Usage Scenario</h3>
-    <div class="product-list">
-        <div>
-            <h4>IoT Gateway</h4>
-            <p>The IoT Gateway collects, processes, and routes data from local area networks (LAN) to the Edge or Server. It acts as a critical bridge, facilitating seamless communication between IoT devices and larger network infrastructures.</p>
-            <img src="/images/edge/tb-edge-gw.webp" alt="ThingsBoard Gateway block" width="306" height="318" loading="lazy">
-            <a href="/docs/iot-gateway/what-is-iot-gateway/" target="_blank">What is ThingsBoard IoT Gateway?</a>
-        </div>
-        <div class="main">
-            <h4>Edge</h4>
-            <p>ThingsBoard Edge processes and visualizes data directly at the network edge, offering immediate insights and reducing bandwidth demands by minimizing the volume of data transmitted to centralized servers.</p>
-            <img src="/images/edge/tb-edge.webp" alt="ThingsBoard Edge block" width="357" height="371" loading="lazy">
-            <a href="/docs/edge/getting-started-guides/what-is-edge/" target="_blank">What is ThingsBoard Edge?</a>
-        </div>
-        <div>
-            <h4>Server</h4>
-            <p>The ThingsBoard Server provides robust data processing and storage solutions, along with advanced analytics capabilities. It supports a wide range of deployments, from on-premises to cloud-based, ensuring flexibility and scalability for diverse enterprise needs.</p>
-            <img src="/images/edge/tb-cloud.webp" alt="ThingsBoard Cloud block" width="306" height="318" loading="lazy">
-            <a href="/docs/getting-started-guides/what-is-thingsboard/" target="_blank">What is ThingsBoard Cloud?</a>
-        </div>
-    </div>
-</section>
-
 <section id="minimal-requirements">
     <main>
         <div id="background">
@@ -319,3 +369,19 @@ description: Comprehensive software solutions for edge computing, providing data
 <section id="bottom">
     <a id="Products_Edge_TryEdgeNow" href="/docs/edge/getting-started/" class="bottom-button gtm_button">Try Edge now</a>
 </section>
+
+<script>
+function switchProductTab(tabId) {
+  var tabs = document.querySelectorAll('.scenario-tab');
+  tabs.forEach(function(tab) {
+    tab.classList.remove('active');
+  });
+  var categories = document.querySelectorAll('.scenario-category');
+  categories.forEach(function(cat) {
+    cat.classList.remove('active');
+  });
+  event.target.classList.add('active');
+  var category = document.getElementById('scenario-cat-' + tabId);
+  if (category) category.classList.add('active');
+}
+</script>
