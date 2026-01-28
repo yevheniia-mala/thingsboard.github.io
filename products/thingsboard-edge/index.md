@@ -28,64 +28,171 @@ description: Comprehensive software solutions for edge computing, providing data
 </section>
 
 <section id="product">
-    <div id="background">
-        <div class="main1"></div><div class="small1"></div><div class="small2"></div><div class="small3"></div><div class="small4"></div>
-    </div>
     <h2 class="product-title">IoT Deployment Architecture</h2>
 <div class="scenario-wrapper">
     <div class="scenario-tabs">
-        <div class="scenario-tab" onclick="switchProductTab('gateway')">
-            <span class="tab-name">IoT Gateway</span>
+        <div class="scenario-tab" onclick="switchProductTab('gateway', event)">
+            <div class="tab-header">
+                <h3 class="tab-name">IoT Gateway</h3>
+                <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
             <div class="tab-tags">
-              <span class="tag">Device connectivity</span><span class="tag">Data routing</span>
-              <span class="tag">Multi-protocol support</span><span class="tag">Legacy device integration</span>
+              <span class="tag">Device connectivity</span>
+              <span class="tag">Data routing</span>
+              <span class="tag">Multi-protocol support</span>
+              <span class="tag">Legacy device integration</span>
+              <p>The IoT Gateway collects, processes, and routes data from local area networks (LAN) to the Edge or Server. It acts as a critical bridge, facilitating seamless communication between IoT devices and larger network infrastructures.</p>
             </div>
         </div>
-        <div class="scenario-tab active" onclick="switchProductTab('edge')">
-            <span class="tab-name">Edge</span>
+        <div class="scenario-tab active" onclick="switchProductTab('edge', event)">
+            <div class="tab-header">
+                <h3 class="tab-name">Edge</h3>
+                <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
             <div class="tab-tags">
               <span class="tag">Local processing</span>
               <span class="tag">Offline operation</span>
               <span class="tag">Low latency</span>
               <span class="tag">Remote sites</span>
               <span class="tag">On-premises analytics</span>
+              <p>ThingsBoard Edge processes and visualizes data directly at the network edge, offering immediate insights and reducing bandwidth demands by minimizing the volume of data transmitted to centralized servers.</p>
             </div>
         </div>
-        <div class="scenario-tab" onclick="switchProductTab('server')">
-            <span class="tab-name">Server</span>
+        <div class="scenario-tab" onclick="switchProductTab('server', event)">
+            <div class="tab-header">
+                <h3 class="tab-name">Server</h3>
+                <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
             <div class="tab-tags">
                 <span class="tag">Cloud infrastructure</span>
                 <span class="tag">Centralized platform</span>
                 <span class="tag">Multi-tenancy</span>
                 <span class="tag">Scalable architecture</span>
+                <p>The ThingsBoard Server provides robust data processing and storage solutions, along with advanced analytics capabilities. It supports a wide range of deployments, from on-premises to cloud-based, ensuring flexibility and scalability for diverse enterprise needs.</p>
             </div>
         </div>
     </div>
+    <div id="background">
+        <div class="main1"></div><div class="small3"></div><div class="small4"></div>
+    </div>
     <div id="scenario-cat-gateway" class="scenario-category">
         <div>
-            <h3>IoT Gateway</h3>
             <img src="/images/edge/tb-edge-gw.webp" alt="ThingsBoard Gateway block" width="315" height="419" loading="lazy">
-            <p>The IoT Gateway collects, processes, and routes data from local area networks (LAN) to the Edge or Server. It acts as a critical bridge, facilitating seamless communication between IoT devices and larger network infrastructures.</p>
-            <a href="/docs/iot-gateway/what-is-iot-gateway/" target="_blank">What is ThingsBoard IoT Gateway?</a>
+            <h4>Minimal requirements</h4>
+            <p><b>Platform:</b> Low-spec server (e.g, Raspberry Pi, Intel NUC)<br><b>CPU:</b> Single-core x86-x64 processor<br><b>RAM:</b> 1 GB<br><b>Storage:</b> 10 GB of free disk space<br><b>OS:</b> Linux (Debian, CentOS)<br></p>
+            <a href="/docs/iot-gateway/getting-started/" target="_blank">Bridge the gap between your devices and a platform!</a>
         </div>
     </div>
     <div id="scenario-cat-edge" class="scenario-category active">
         <div>
-            <h3>Edge</h3>
             <img src="/images/edge/tb-edge.webp" alt="ThingsBoard Edge block" width="915" height="600" loading="lazy">
-            <p>ThingsBoard Edge processes and visualizes data directly at the network edge, offering immediate insights and reducing bandwidth demands by minimizing the volume of data transmitted to centralized servers.</p>
-            <a href="/docs/edge/getting-started-guides/what-is-edge/" target="_blank">What is ThingsBoard Edge?</a>
+            <h4>Minimal requirements</h4>
+            <p><b>Platform:</b> Compact server (e.g, Intel NUC, mini-PC, embedded PC)<br><b>CPU:</b> 2-core x86-64 processor<br><b>RAM:</b> 2 GB<br><b>Storage:</b> 20 GB of free disk space<br><b>OS:</b> Linux (Debian, CentOS) or Windows<br><b>Java VM:</b> JDK 8+ (JDK 17 preferred)</p>
+            <a href="/docs/edge/getting-started/" target="_blank">Try Edge now</a>
         </div>
     </div>
     <div id="scenario-cat-server" class="scenario-category">
         <div>
-            <h3>Server</h3>
             <img src="/images/edge/tb-cloud.webp" alt="ThingsBoard Cloud block" width="1010" height="600" loading="lazy">
-            <p>The ThingsBoard Server provides robust data processing and storage solutions, along with advanced analytics capabilities. It supports a wide range of deployments, from on-premises to cloud-based, ensuring flexibility and scalability for diverse enterprise needs.</p>
-            <a href="/docs/getting-started-guides/what-is-thingsboard/" target="_blank">What is ThingsBoard Cloud?</a>
+            <h4>Minimal requirements</h4>
+            <p><b>Platform:</b> Standard server or VM (cloud/on-premises)<br><b>CPU:</b> Multi-core processor (2+ cores recommended)<br><b>RAM:</b> 4 GB minimum (with PostgreSQL), 8 GB with Cassandra<br><b>Storage:</b> 20 GB+ of free disk space<br><b>OS:</b> Linux (Ubuntu 20.04/22.04/24.04, CentOS/RHEL 8/9), Windows 10/11, or Docker<br><b>Java:</b> OpenJDK 17<br><b>Database:</b> PostgreSQL 11+ or Apache Cassandra 3.11+</p>
+            <a href="/docs/getting-started-guides/helloworld/" target="_blank">Get started with ThingsBoard Server</a>
         </div>
     </div>
 </div>
+</section>
+
+<section id="matrix">
+    <div id="backg-matrix">
+        <div class="cloud"><div class="coln"><div class="head"></div></div></div>
+        <div class="edge"><div class="coln"><div class="head"></div></div></div>
+        <div class="gateway"><div class="coln"><div class="head"></div></div></div>
+    </div>
+    <h2>Feature Comparison Matrix</h2>
+    <table>
+            <thead>
+                <tr>
+                    <td></td>
+                    <th>IoT<br>Gateway</th>
+                    <th>ThingsBoard<br>Edge</th>
+                    <th>ThingsBoard<br>Server</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>ThingsBoard Server Required</th>
+                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
+                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <th>Data Collection</th>
+                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
+                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
+                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
+                </tr>
+                <tr>
+                    <th>Core Protocols Support<br>(MQTT, HTTP, CoAP, etc.)</th>
+                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
+                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
+                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
+                </tr>
+                <tr>
+                    <th>Peripheral Infrastructure Protocols Support<br>(Modbus, BACNet, BLE, etc.)</th>
+                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
+                    <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
+                    <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
+                </tr>
+                <tr>
+                    <th>Data Processing and Analysis</th>
+                    <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
+                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
+                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
+                </tr>
+                <tr>
+                    <th>Real-Time and SCADA-like HMI Dashboards</th>
+                    <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
+                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
+                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
+                </tr>
+                <tr>
+                    <th>Alarms & Notifications</th>
+                    <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
+                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
+                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
+                </tr>
+                <tr>
+                    <th>Asset Management</th>
+                    <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
+                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
+                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
+                </tr>
+                <tr>
+                    <th>Offline Data Computing and Storage<br>(Remote Site Scenarios)</th>
+                    <td>Data Collection</td>
+                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
+                    <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
+                </tr>
+                <tr>
+                    <th>Multi-Tenancy Support</th>
+                    <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
+                    <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
+                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
+                </tr>
+                <tr>
+                    <th>Hardware Resources Usage</th>
+                    <td>Low</td>
+                    <td>Medium to Low</td>
+                    <td>High to Medium</td>
+                </tr>
+            </tbody>
+    </table>
 </section>
 
 <section id="local-deployment">
@@ -252,92 +359,7 @@ description: Comprehensive software solutions for edge computing, providing data
     </main>
 </section>
 
-<section id="matrix">
-    <div id="backg-matrix">
-        <div class="cloud"><div class="coln"><div class="head"></div></div></div>
-        <div class="edge"><div class="coln"><div class="head"></div></div></div>
-        <div class="gateway"><div class="coln"><div class="head"></div></div></div>
-    </div>
-    <h3>Feature Comparison Matrix</h3>
-    <table>
-            <thead>
-                <tr>
-                    <td></td>
-                    <th>IoT<br>Gateway</th>
-                    <th>ThingsBoard<br>Edge</th>
-                    <th>ThingsBoard<br>Server</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>ThingsBoard Server Required</th>
-                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
-                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
-                    <td>N/A</td>
-                </tr>
-                <tr>
-                    <th>Data Collection</th>
-                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
-                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
-                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
-                </tr>
-                <tr>
-                    <th>Core Protocols Support<br>(MQTT, HTTP, CoAP, etc.)</th>
-                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
-                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
-                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
-                </tr>
-                <tr>
-                    <th>Peripheral Infrastructure Protocols Support<br>(Modbus, BACNet, BLE, etc.)</th>
-                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
-                    <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
-                    <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
-                </tr>
-                <tr>
-                    <th>Data Processing and Analysis</th>
-                    <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
-                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
-                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
-                </tr>
-                <tr>
-                    <th>Real-Time and SCADA-like HMI Dashboards</th>
-                    <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
-                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
-                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
-                </tr>
-                <tr>
-                    <th>Alarms & Notifications</th>
-                    <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
-                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
-                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
-                </tr>
-                <tr>
-                    <th>Asset Management</th>
-                    <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
-                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
-                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
-                </tr>
-                <tr>
-                    <th>Offline Data Computing and Storage<br>(Remote Site Scenarios)</th>
-                    <td>Data Collection</td>
-                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
-                    <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
-                </tr>
-                <tr>
-                    <th>Multi-Tenancy Support</th>
-                    <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
-                    <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
-                    <td><img src="/images/pe/checked.svg" alt="checked"></td>
-                </tr>
-                <tr>
-                    <th>Hardware Resources Usage</th>
-                    <td>Low</td>
-                    <td>Medium to Low</td>
-                    <td>High to Medium</td>
-                </tr>
-            </tbody>
-    </table>
-</section>
+
 
 <section id="minimal-requirements">
     <main>
@@ -380,7 +402,7 @@ function switchProductTab(tabId) {
   categories.forEach(function(cat) {
     cat.classList.remove('active');
   });
-  event.target.classList.add('active');
+  event.target.closest('.scenario-tab').classList.add('active');
   var category = document.getElementById('scenario-cat-' + tabId);
   if (category) category.classList.add('active');
 }
