@@ -51,12 +51,12 @@
         transition: all 0.3s ease
         border: 2px solid white
         color: white
-        text-shadow: 0 0 18px rgba(0,0,0,.66)
         &:hover
           transform: scale(1.08)
           background-color: rgba(255,255,255,0.15)
         &:first-of-type
-          background-color: rgba(255,255,255,0.45)
+          background-color: white
+          color: #009688
           &:hover
             transform: scale(1.08)
             background-color: white
@@ -160,7 +160,7 @@
       font-size: 18px
 
     #intro
-      margin-bottom: 60px
+      margin-bottom: 10px
       padding-top: 25px
       color: #212924
       .intro_title
@@ -201,15 +201,143 @@
         color: #757C76
         line-height: 1.4
 
-    #matrix
-      margin: 80px -100% 0
-      padding: 0 100% 88px
-      h3
-        color: #212529
-        font-weight: 600
+    #product
+      padding: 10px 0
+      #background
+        .small1
+          top: -50px
+      .product-title
         text-align: center
+        margin-top: 30px
+        margin-bottom: 30px
+        font-size: 42px
+        font-weight: 600
+        color: #212529
+      .scenario-wrapper
+        max-width: 1400px
+        margin: 0 auto
+        display: flex
+        gap: 40px
+        align-items: flex-start
+      .scenario-tabs
+        flex: 0 0 520px
+        display: flex
+        flex-direction: column
+        gap: 12px
+      .scenario-tab
+        padding: 20px 24px
         font-size: 20px
-        line-height: 40px
+        font-weight: 500
+        line-height: 1.4
+        color: #212529
+        background: white
+        border-radius: 12px
+        cursor: pointer
+        transition: all 0.3s ease
+        text-align: left
+        border: 2px solid transparent
+        &:hover
+          background: #F5F7FA
+        &.active
+          background: #E8F5F3
+          color: #212529
+          box-shadow: 0 2px 8px rgba(0,0,0,0.08)
+          .chevron
+            transform: rotate(180deg)
+          .tab-tags
+            display: flex
+          .tag
+            color: #009688
+            border: 1px solid #009688
+            background: transparent
+            font-size: 16px
+            font-weight: 400
+          p
+            color: #212529
+            font-size: 16px
+            font-weight: 400
+        .tab-header
+          display: flex
+          justify-content: space-between
+          align-items: center
+          width: 100%
+          .tab-name
+            margin: 0
+            font-size: 24px
+            font-weight: 400
+            line-height: inherit
+            display: block
+          .chevron
+            display: inline-block
+            margin-left: 8px
+            vertical-align: middle
+            transition: transform 0.3s ease
+            flex-shrink: 0
+            color: currentColor
+        .tab-tags
+          display: none
+          flex-wrap: wrap
+          gap: 8px
+          margin-top: 12px
+        .tag
+          display: inline-block
+          padding: 6px 14px
+          font-size: 13px
+          font-weight: 400
+          color: #009688
+          background: transparent
+          border: 1px solid #009688
+          border-radius: 6px
+          transition: all 0.2s ease
+          text-align: center
+      .scenario-category
+        display: none
+        flex: 1
+        min-width: 1000px
+        &.active
+          display: block
+        div
+          background: transparent
+          padding: 48px
+        img
+          display: block
+          max-width: 100%
+          height: auto
+          margin: 0 auto 32px
+          border-radius: 8px
+        .cta-button
+          display: block
+          width: fit-content
+          padding: 12px 32px
+          margin: 0 auto
+          background: #009688
+          color: white
+          font-size: 20px
+          font-weight: 500
+          text-decoration: none
+          border-radius: 6px
+          transition: all 0.3s ease
+          box-shadow: 0 2px 8px rgba(0,150,136,0.3)
+          &:hover
+            background: #1EB7A9
+            box-shadow: 0 4px 12px rgba(0,150,136,0.4)
+            text-decoration: none
+            transform: translateY(-2px)
+
+    #matrix
+      margin: 40px -100% 0
+      padding: 0 100% 88px
+      h2
+        text-align: center
+        margin-bottom: 35px
+        font-size: 42px
+        font-weight: 600
+        color: #212529
+      p
+        text-align: center
+        margin-bottom: 54px
+        font-size: 20px
+        line-height: 1.6
       #backg-matrix
         position: relative
         margin-left: -20px
@@ -220,7 +348,7 @@
           width: 20%
           position: absolute
           z-index: -1
-          top: 127px
+          top: 185px
         .coln
           height: 840px
           border-radius: 6px
@@ -285,6 +413,11 @@
               padding: 46px 0 30px
               &:nth-child(1n)
                 color: white
+              a
+                text-decoration: none
+                transition: color 0.2s ease
+                &:hover
+                  text-decoration: underline
             td
               width: 40%
         tbody
@@ -304,183 +437,124 @@
               font-size: 11px
               img
                 width: 32px
-    #product
-      padding: 10px 0
-      .product-title
+
+    #authored-quote
+      margin-top: 150px
+      padding: 20px 20px
+      #background
+        .main1
+          top: -150px
+        .small3
+          top: -300px
+        .small4
+          top: -90px
+      main
+        max-width: 1500px
+        margin: 0 auto
+        background: white
+        border: 2px solid #E8EBF0
+        border-radius: 24px
+        padding: 24px
+        display: grid
+        grid-template-columns: 185px 1fr
+        gap: 40px
+        position: relative
+      img
+        grid-column: 1
+        grid-row: 1
+        width: 200px
+        height: 200px
+        border-radius: 12px
+        object-fit: cover
+        object-position: 15% center
+        position: relative
+        z-index: 1
+      .text
+        grid-column: 2
+        grid-row: 1
+        padding-left: 32px
+        border-left: 4px solid #009688
+        position: relative
+        z-index: 1
+        h2
+          font-size: 24px
+          font-weight: 600
+          color: #212529
+          margin-bottom: 20px
+        .quote
+          font-size: 16px
+          line-height: 1.6
+          color: #3D3D3D
+          margin-bottom: 24px
+        .author
+          font-size: 18px
+          font-weight: 600
+          color: #212529
+          margin-bottom: 4px
+        .title
+          font-size: 14px
+          color: #757C76
+          margin: 0
+
+    #get-in-touch
+      padding: 60px 20px
+      position: relative
+      main
+        max-width: 1500px
+        margin: 0 auto
+        position: relative
+        opacity: 0
+        transform: translateY(50px)
+        animation: slideUp 0.8s ease-out forwards
+      @keyframes slideUp
+        to
+          opacity: 1
+          transform: translateY(0)
+      #background
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+      .block
+        background: white
+        border: 2px solid #009688
+        border-radius: 24px
+        padding: 40px 60px
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08)
+        display: flex
+        justify-content: space-between
+        align-items: center
+        gap: 40px
+      .cta
+        font-size: 32px
+        font-weight: 600
+        color: #212529
+        margin: 0
+      .button
+        display: inline-block
+        padding: 16px 40px
+        background: #009688
+        color: white
+        font-size: 20px
+        font-weight: 500
+        text-decoration: none
+        border-radius: 8px
+        transition: all 0.3s ease
+        white-space: nowrap
+        &:hover
+          background: #1EB7A9
+          transform: translateY(-2px)
+          box-shadow: 0 4px 12px rgba(0,150,136,0.4)
+
+    #local-deployment, #data-filtering, #local-alarms, #batch-update
+      h2
         text-align: center
-        margin-bottom: 80px
+        margin: 60px 0 10px
         font-size: 42px
         font-weight: 600
         color: #212529
-      .scenario-wrapper
-        max-width: 1400px
-        margin: 0 auto
-        display: flex
-        gap: 40px
-        align-items: flex-start
-      .scenario-tabs
-        flex: 0 0 520px
-        display: flex
-        flex-direction: column
-        gap: 12px
-      .scenario-tab
-        padding: 20px 24px
-        font-size: 20px
-        font-weight: 500
-        line-height: 1.4
-        color: #212529
-        background: white
-        border-radius: 12px
-        cursor: pointer
-        transition: all 0.3s ease
-        text-align: left
-        border: 2px solid transparent
-        &:hover
-          background: #F5F7FA
-        &.active
-          background: #009688
-          color: white
-          box-shadow: 0 2px 8px rgba(0,0,0,0.08)
-          .chevron
-            transform: rotate(180deg)
-          .tab-tags
-            display: flex
-          .tag
-            color: white
-            border: 1px solid white
-            background: transparent
-          p
-            color: white
-            font-size: 16px
-            font-weight: 400
-        .tab-header
-          display: flex
-          justify-content: space-between
-          align-items: center
-          width: 100%
-          .tab-name
-            margin: 0
-            font-size: 24px
-            font-weight: 400
-            line-height: inherit
-            display: block
-          .chevron
-            display: inline-block
-            margin-left: 8px
-            vertical-align: middle
-            transition: transform 0.3s ease
-            flex-shrink: 0
-            color: currentColor
-        .tab-tags
-          display: none
-          flex-wrap: wrap
-          gap: 8px
-          margin-top: 12px
-        .tag
-          display: inline-block
-          padding: 6px 14px
-          font-size: 13px
-          font-weight: 400
-          color: #009688
-          background: transparent
-          border: 1px solid #009688
-          border-radius: 6px
-          transition: all 0.2s ease
-          text-align: center
-      .scenario-category
-        display: none
-        flex: 1
-        &.active
-          display: block
-        div
-          background: white
-          border-radius: 16px
-          padding: 48px
-          box-shadow: 0 2px 12px rgba(0,0,0,0.08)
-          border: 1px solid #E8EBF0
-        h4
-          font-size: 20px
-          font-weight: 500
-          color: #212529
-          margin-bottom: 24px
-          text-align: center
-        img
-          display: block
-          max-width: 100%
-          height: auto
-          margin: 0 auto 32px
-          border-radius: 8px
-        p
-          font-size: 16px
-          line-height: 1.6
-          color: #212529
-          margin-bottom: 24px
-          text-align: left
-          b
-            font-weight: 600
-        a
-          display: block
-          width: fit-content
-          margin: 0 auto
-          color: #2A7DEC
-          font-size: 16px
-          font-weight: 500
-          text-decoration: none
-          transition: color 0.2s ease
-          &:hover
-            color: #1e5fb8
-            text-decoration: underline
-      @media screen and (max-width: 1200px)
-        .scenario-wrapper
-          gap: 32px
-        .scenario-tabs
-          flex: 0 0 280px
-        .scenario-tab
-          font-size: 18px
-          padding: 18px 20px
-      @media screen and (max-width: 960px)
-        padding: 60px 0
-        .product-title
-          font-size: 36px
-          margin-bottom: 48px
-        .scenario-wrapper
-          flex-direction: column
-        .scenario-tabs
-          width: 100%
-          flex-direction: row
-          justify-content: flex-start
-          flex-wrap: wrap
-        .scenario-tab
-          flex: 1
-          min-width: 150px
-          text-align: center
-        .scenario-category div
-          padding: 36px 28px
-      @media screen and (max-width: 600px)
-        padding: 40px 0
-        .product-title
-          font-size: 28px
-          margin-bottom: 36px
-        .scenario-tabs
-          flex-direction: column
-        .scenario-tab
-          width: 100%
-          text-align: left
-        .scenario-category div
-          padding: 28px 20px
-        .scenario-category h3
-          font-size: 24px
-          margin-bottom: 24px
-        .scenario-category p
-          font-size: 15px
-    #minimal-requirements
-      main
-        #background
-          .main1
-            top: -200px
-            height: 890px
-
-    #local-deployment, #data-filtering, #local-alarms, #batch-update, #minimal-requirements
       .block
         justify-content: space-between
         display: flex
@@ -517,66 +591,139 @@
     #batch-update .block
       padding: 80px 0 120px
 
-    #minimal-requirements .block .feature-des
-      padding: 80px 0 120px
-
     #bottom-features
-      padding-top: 72px
-      .cards
-        background-color: #EFFAF9
-        padding: 72px 50% 28px
+      padding: 20px 20px
+      main
+        max-width: 1500px
+        margin: 0 auto
+        position: relative
+      h2
+        text-align: center
+        margin-bottom: 60px
+        font-size: 42px
+        font-weight: 600
+        color: #212529
+      .features-grid
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 24px
+      .feature-card
+        background: white
+        border: 2px solid #E8EBF0
+        border-radius: 12px
+        overflow: hidden
+        transition: all 0.3s ease
+        &:hover
+          border-color: #009688
+          box-shadow: 0 4px 12px rgba(0,150,136,0.15)
+        &.active
+          border-color: #009688
+          .chevron
+            transform: rotate(180deg)
+        &.open
+          .chevron
+            transform: rotate(180deg)
+          .feature-content
+            max-height: 500px
+            padding: 0 24px 24px
+            opacity: 1
+      .feature-header
+        display: flex
+        align-items: center
+        gap: 16px
+        padding: 24px
+        cursor: pointer
+        transition: background 0.2s ease
+        &:hover
+          background: #F8F9FA
+      .feature-icon
+        flex: 0 0 68px
+        width: 68px
+        height: 68px
+        display: flex
+        align-items: center
         justify-content: center
-        margin-right: -50%
-        margin-left: -50%
-        &>div
-          margin-bottom: 36px
-          &.col-lg-6
-            padding: 0 18px
-            max-width: 100%
-          .block
-            padding: 48px
-            float: left
-            width: 100%
-            height: 100%
-            background: white
-            border-radius: 6px
-            box-shadow: 0 50px 50px -20px rgba(0,0,0,0.15)
-            display: unset
-            text-align: center
-            div
-              width: 100%
-              .title
-                margin-bottom: 6px
-                line-height: 33px
-              p
-                margin-top: 10px
-            img
-              height: fit-content
-              margin: 0 0 18px
+        background: #F0F8F7
+        border-radius: 8px
+        img
+          width: 58px
+          height: 58px
+      .feature-title
+        flex: 1
+        font-size: 18px
+        font-weight: 600
+        color: #212529
+        margin: 0
+      .chevron
+        flex: 0 0 20px
+        color: #757C76
+        transition: transform 0.3s ease
+      .feature-content
+        max-height: 0
+        overflow: hidden
+        opacity: 0
+        transition: all 0.4s ease
+        p
+          font-size: 18px
+          line-height: 1.6
+          color: #3D3D3D
+          margin: 0
 
     #bottom
-      display: flex
-      justify-content: center
-      padding: 46px 0 100px
+      padding: 80px 20px
+      .contact-us-banner
+        max-width: 1500px
+        margin: 0 auto
+        background: white
+        border: 2px solid #009688
+        border-radius: 24px
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08)
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 10px 60px
+        gap: 60px
+        position: relative
+        overflow: hidden
+        opacity: 0
+        transform: translateY(50px)
+        animation: slideUp 0.8s ease-out forwards
+      @keyframes slideUp
+        to
+          opacity: 1
+          transform: translateY(0)
+      .contact-us-banner-content
+        flex: 1
+        h2
+          font-size: 32px
+          font-weight: 500
+          color: #212529
+          margin: 0 0 32px
+          line-height: 1.2
+      .contact-us-banner-buttons
+        display: flex
+        gap: 16px
       .bottom-button
-        background-color: #009688
-        font-size: 24px
-        font-weight: 400
-        text-align: center
+        display: inline-block
+        padding: 16px 40px
+        background: #009688
         color: white
-        border-radius: 4px
+        font-size: 20px
+        font-weight: 500
         text-decoration: none
-        padding: 16px
-        width: 350px
-        display: block
-        box-shadow: 0 28px 16px -20px rgba(34,41,41,0.25)
+        border-radius: 8px
+        transition: all 0.3s ease
         &:hover
-          background-color: #1EB7A9
-          text-decoration: none
-          color: #fff
-        &:active
-          background-color: #009688
-          transition-duration: 0s
+          background: #1EB7A9
+          transform: translateY(-2px)
+          box-shadow: 0 4px 12px rgba(0,150,136,0.4)
+      img
+        flex: 0 0 280px
+        width: 280px
+        height: auto
+        opacity: 0.9
+        -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%)
+        mask-image: linear-gradient(to bottom, black 0%, transparent 100%)
 
     #background
       z-index: -1
@@ -685,7 +832,7 @@
           .feature-des, .block-img
             width: 80%
       #matrix
-        h3
+        h2
           font-size: 42px
           line-height: 63px
         #backg-matrix
@@ -700,6 +847,12 @@
                 width: 20%
                 padding: 0 0 10px
                 font-size: 20px
+                a
+                  text-decoration: none
+                  transition: color 0.2s ease
+                  &:hover
+                    color: #006988
+                    text-decoration: underline
               td
                 width: 40%
           tbody
@@ -711,13 +864,6 @@
                 font-size: 20px
                 img
                   width: unset
-      #bottom-features .cards .col-lg-6 .block
-        text-align: left
-        display: flex
-        div
-          width: calc(100% - 122px)
-        img
-          margin: 0 30px 0 0
 
   @media screen and (max-width: 750px)
     #matrix
@@ -837,3 +983,140 @@
       font-size: 56px
     .stat-label
       font-size: 17px
+
+    @media screen and (max-width: 1024px)
+      #authored-quote
+        main
+          grid-template-columns: 1fr
+          padding: 40px 32px
+        img
+          grid-column: 1
+          margin: 0 auto
+        .text
+          grid-column: 1
+          border-left: none
+          padding-left: 0
+          padding-top: 24px
+          border-top: 4px solid #009688
+
+          @media screen and (max-width: 768px)
+            #authored-quote
+              padding: 40px 16px
+              main
+                padding: 32px 24px
+              img
+                width: 150px
+                height: 150px
+              .text
+                h2
+                  font-size: 20px
+                .quote
+                  font-size: 15px
+
+    @media screen and (max-width: 768px)
+      #get-in-touch
+        padding: 40px 16px
+        .block
+          flex-direction: column
+          text-align: center
+          padding: 32px 24px
+          gap: 24px
+        .cta
+          font-size: 24px
+          @media screen and (max-width: 1200px)
+            .scenario-wrapper
+              gap: 32px
+            .scenario-tabs
+              flex: 0 0 280px
+            .scenario-tab
+              font-size: 18px
+              padding: 18px 20px
+          @media screen and (max-width: 960px)
+            padding: 60px 0
+            .product-title
+              font-size: 36px
+              margin-bottom: 48px
+            .scenario-wrapper
+              flex-direction: column
+            .scenario-tabs
+              width: 100%
+              flex-direction: row
+              justify-content: flex-start
+              flex-wrap: wrap
+            .scenario-tab
+              flex: 1
+              min-width: 150px
+              text-align: center
+            .scenario-category div
+              padding: 36px 28px
+          @media screen and (max-width: 600px)
+            padding: 40px 0
+            .product-title
+              font-size: 28px
+              margin-bottom: 36px
+            .scenario-tabs
+              flex-direction: column
+            .scenario-tab
+              width: 100%
+              text-align: left
+            .scenario-category div
+              padding: 28px 20px
+            .scenario-category h3
+              font-size: 24px
+              margin-bottom: 24px
+            .scenario-category p
+              font-size: 15px
+
+      @media screen and (max-width: 1024px)
+        .bottom
+          .contact-us-banner
+            padding: 50px 60px
+            gap: 40px
+          .contact-us-banner-content
+            h2
+              font-size: 36px
+          img
+            width: 300px
+            flex: 0 0 300px
+
+      @media screen and (max-width: 768px)
+        .bottom
+          padding: 60px 16px
+          .contact-us-banner
+            flex-direction: column
+            text-align: center
+            padding: 40px 32px
+            gap: 32px
+          .contact-us-banner-content
+            h2
+              font-size: 28px
+              margin-bottom: 24px
+          .contact-us-banner-buttons
+            justify-content: center
+          img
+            width: 240px
+            flex: 0 0 auto
+
+    @media screen and (max-width: 1200px)
+      #bottom-features
+        .features-grid
+          grid-template-columns: repeat(2, 1fr)
+          gap: 20px
+
+    @media screen and (max-width: 768px)
+      #bottom-features
+        padding: 60px 16px
+        h3
+          font-size: 32px
+          margin-bottom: 40px
+        .features-grid
+          grid-template-columns: 1fr
+          gap: 16px
+        .feature-header
+          padding: 20px
+          gap: 12px
+        .feature-icon
+          width: 40px
+          height: 40px
+          img
+            width: 24px

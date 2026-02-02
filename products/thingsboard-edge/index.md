@@ -5,7 +5,7 @@ description: Comprehensive software solutions for edge computing, providing data
 ---
 
 <section id="intro">
-	<main>
+    <main>
         <div class="stats-container">
             <div class="stat-block">
                 <div class="stat-number">5</div>
@@ -28,93 +28,94 @@ description: Comprehensive software solutions for edge computing, providing data
 </section>
 
 <section id="product">
-    <h2 class="product-title">IoT Deployment Architecture</h2>
-<div class="scenario-wrapper">
-    <div class="scenario-tabs">
-        <div class="scenario-tab" onclick="switchProductTab('gateway', event)">
-            <div class="tab-header">
-                <h3 class="tab-name">IoT Gateway</h3>
-                <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+    <main>
+        <div id="background">
+           <div class="small1"></div><div class="small3"></div>
+        </div>
+    <h2 class="product-title">IoT Architecture Comparison</h2>
+    <div class="scenario-wrapper">
+        <div class="scenario-tabs">
+            <div class="scenario-tab" onclick="switchProductTab('gateway', event)">
+                <div class="tab-header">
+                    <h3 class="tab-name">IoT Gateway</h3>
+                    <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                      <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="tab-tags">
+                  <span class="tag">Device connectivity</span>
+                  <span class="tag">Data routing</span>
+                  <span class="tag">Multi-protocol support</span>
+                  <span class="tag">Legacy device integration</span>
+                  <p>The IoT Gateway bridges local devices to Edge or Server, handling multi-protocol conversion and data routing. It enables legacy equipment integration and real-time data streaming across diverse communication protocols without cloud dependency.</p>
+                </div>
             </div>
-            <div class="tab-tags">
-              <span class="tag">Device connectivity</span>
-              <span class="tag">Data routing</span>
-              <span class="tag">Multi-protocol support</span>
-              <span class="tag">Legacy device integration</span>
-              <p>The IoT Gateway collects, processes, and routes data from local area networks (LAN) to the Edge or Server. It acts as a critical bridge, facilitating seamless communication between IoT devices and larger network infrastructures.</p>
+            <div class="scenario-tab active" onclick="switchProductTab('edge', event)">
+                <div class="tab-header">
+                    <h3 class="tab-name">ThingsBoard Edge</h3>
+                    <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                      <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="tab-tags">
+                  <span class="tag">Local processing</span>
+                  <span class="tag">Offline operation</span>
+                  <span class="tag">Low latency</span>
+                  <span class="tag">Remote sites</span>
+                  <span class="tag">On-premises analytics</span>
+                  <p>ThingsBoard Edge processes and visualizes data locally at the network edge, enabling autonomous operation during connectivity outages. It reduces bandwidth costs by filtering data before cloud transmission while maintaining sub-second response times for critical automation.</p>
+                </div>
+            </div>
+            <div class="scenario-tab" onclick="switchProductTab('server', event)">
+                <div class="tab-header">
+                    <h3 class="tab-name">ThingsBoard Server</h3>
+                    <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                      <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="tab-tags">
+                    <span class="tag">Cloud infrastructure</span>
+                    <span class="tag">Centralized platform</span>
+                    <span class="tag">Multi-tenancy</span>
+                    <span class="tag">Scalable architecture</span>
+                    <p>The ThingsBoard Server provides centralized data processing, storage, and advanced analytics with enterprise-grade scalability. It supports multi-tenancy, flexible deployment options from on-premises to cloud, and unlimited device connectivity for large-scale IoT infrastructure.</p>
+                </div>
             </div>
         </div>
-        <div class="scenario-tab active" onclick="switchProductTab('edge', event)">
-            <div class="tab-header">
-                <h3 class="tab-name">Edge</h3>
-                <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </div>
-            <div class="tab-tags">
-              <span class="tag">Local processing</span>
-              <span class="tag">Offline operation</span>
-              <span class="tag">Low latency</span>
-              <span class="tag">Remote sites</span>
-              <span class="tag">On-premises analytics</span>
-              <p>ThingsBoard Edge processes and visualizes data directly at the network edge, offering immediate insights and reducing bandwidth demands by minimizing the volume of data transmitted to centralized servers.</p>
+        <div id="scenario-cat-gateway" class="scenario-category">
+            <div>
+                <img src="/images/edge/tb-edge-gw.webp" alt="ThingsBoard Gateway block" width="615" height="719" loading="lazy">
+                <a href="/docs/iot-gateway/getting-started/" target="_blank" class="cta-button gtm_button">Connect Your Devices</a>
             </div>
         </div>
-        <div class="scenario-tab" onclick="switchProductTab('server', event)">
-            <div class="tab-header">
-                <h3 class="tab-name">Server</h3>
-                <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </div>
-            <div class="tab-tags">
-                <span class="tag">Cloud infrastructure</span>
-                <span class="tag">Centralized platform</span>
-                <span class="tag">Multi-tenancy</span>
-                <span class="tag">Scalable architecture</span>
-                <p>The ThingsBoard Server provides robust data processing and storage solutions, along with advanced analytics capabilities. It supports a wide range of deployments, from on-premises to cloud-based, ensuring flexibility and scalability for diverse enterprise needs.</p>
+        <div id="scenario-cat-edge" class="scenario-category active">
+            <div>
+                <img src="/images/edge/tb-edge.webp" alt="ThingsBoard Edge block" loading="lazy">
+                <a href="/docs/edge/getting-started/" target="_blank" class="cta-button gtm_button">Try Edge Now</a>
             </div>
         </div>
-    </div>
-    <div id="background">
-        <div class="main1"></div><div class="small3"></div><div class="small4"></div>
-    </div>
-    <div id="scenario-cat-gateway" class="scenario-category">
-        <div>
-            <img src="/images/edge/tb-edge-gw.webp" alt="ThingsBoard Gateway block" width="315" height="419" loading="lazy">
-            <h4>Minimal requirements</h4>
-            <p><b>Platform:</b> Low-spec server (e.g, Raspberry Pi, Intel NUC)<br><b>CPU:</b> Single-core x86-x64 processor<br><b>RAM:</b> 1 GB<br><b>Storage:</b> 10 GB of free disk space<br><b>OS:</b> Linux (Debian, CentOS)<br></p>
-            <a href="/docs/iot-gateway/getting-started/" target="_blank">Bridge the gap between your devices and a platform!</a>
-        </div>
-    </div>
-    <div id="scenario-cat-edge" class="scenario-category active">
-        <div>
-            <img src="/images/edge/tb-edge.webp" alt="ThingsBoard Edge block" width="915" height="600" loading="lazy">
-            <h4>Minimal requirements</h4>
-            <p><b>Platform:</b> Compact server (e.g, Intel NUC, mini-PC, embedded PC)<br><b>CPU:</b> 2-core x86-64 processor<br><b>RAM:</b> 2 GB<br><b>Storage:</b> 20 GB of free disk space<br><b>OS:</b> Linux (Debian, CentOS) or Windows<br><b>Java VM:</b> JDK 8+ (JDK 17 preferred)</p>
-            <a href="/docs/edge/getting-started/" target="_blank">Try Edge now</a>
-        </div>
-    </div>
-    <div id="scenario-cat-server" class="scenario-category">
-        <div>
-            <img src="/images/edge/tb-cloud.webp" alt="ThingsBoard Cloud block" width="1010" height="600" loading="lazy">
-            <h4>Minimal requirements</h4>
-            <p><b>Platform:</b> Standard server or VM (cloud/on-premises)<br><b>CPU:</b> Multi-core processor (2+ cores recommended)<br><b>RAM:</b> 4 GB minimum (with PostgreSQL), 8 GB with Cassandra<br><b>Storage:</b> 20 GB+ of free disk space<br><b>OS:</b> Linux (Ubuntu 20.04/22.04/24.04, CentOS/RHEL 8/9), Windows 10/11, or Docker<br><b>Java:</b> OpenJDK 17<br><b>Database:</b> PostgreSQL 11+ or Apache Cassandra 3.11+</p>
-            <a href="/docs/getting-started-guides/helloworld/" target="_blank">Get started with ThingsBoard Server</a>
+        <div id="scenario-cat-server" class="scenario-category">
+            <div>
+                <img src="/images/edge/tb-cloud.webp" alt="ThingsBoard Cloud block" loading="lazy">
+                <a href="/docs/getting-started-guides/helloworld/" target="_blank" class="cta-button gtm_button">Get Started</a>
+            </div>
         </div>
     </div>
-</div>
+    </main>
 </section>
 
 <section id="matrix">
+    <main>
+        <div id="background">
+            <div class="small1"></div><div class="small2"></div><div class="small6"></div>
+        </div>
     <div id="backg-matrix">
         <div class="cloud"><div class="coln"><div class="head"></div></div></div>
         <div class="edge"><div class="coln"><div class="head"></div></div></div>
         <div class="gateway"><div class="coln"><div class="head"></div></div></div>
     </div>
-    <h2>Feature Comparison Matrix</h2>
+    <h2>Which ThingsBoard Product Is Right for You?</h2>
+    <p>Compare IoT Gateway, Edge, and Server capabilities to find the best fit for your IoT infrastructure and connectivity requirements.</p>
     <table>
             <thead>
                 <tr>
@@ -132,55 +133,55 @@ description: Comprehensive software solutions for edge computing, providing data
                     <td>N/A</td>
                 </tr>
                 <tr>
-                    <th>Data Collection</th>
+                    <th><a href="/docs/reference/performance/" target="_blank">Data Collection</a></th>
                     <td><img src="/images/pe/checked.svg" alt="checked"></td>
                     <td><img src="/images/pe/checked.svg" alt="checked"></td>
                     <td><img src="/images/pe/checked.svg" alt="checked"></td>
                 </tr>
                 <tr>
-                    <th>Core Protocols Support<br>(MQTT, HTTP, CoAP, etc.)</th>
+                    <th><a href="/docs/api/" target="_blank">Core Protocols Support<br>(MQTT, HTTP, CoAP, etc.)</a></th>
                     <td><img src="/images/pe/checked.svg" alt="checked"></td>
                     <td><img src="/images/pe/checked.svg" alt="checked"></td>
                     <td><img src="/images/pe/checked.svg" alt="checked"></td>
                 </tr>
                 <tr>
-                    <th>Peripheral Infrastructure Protocols Support<br>(Modbus, BACNet, BLE, etc.)</th>
+                    <th><a href="/docs/iot-gateway/what-is-iot-gateway/" target="_blank">Peripheral Infrastructure Protocols Support<br>(Modbus, BACNet, BLE, etc.)</a></th>
                     <td><img src="/images/pe/checked.svg" alt="checked"></td>
                     <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
                     <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
                 </tr>
                 <tr>
-                    <th>Data Processing and Analysis</th>
+                    <th><a href="/docs/guides/#AnchorIDDataProcessing" target="_blank">Data Processing and Analysis</a></th>
                     <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
                     <td><img src="/images/pe/checked.svg" alt="checked"></td>
                     <td><img src="/images/pe/checked.svg" alt="checked"></td>
                 </tr>
                 <tr>
-                    <th>Real-Time and SCADA-like HMI Dashboards</th>
+                    <th><a href="/docs/user-guide/dashboards/" target="_blank">Real-Time HMI Dashboards</a><br>and <a href="/docs/user-guide/scada/" target="_blank">SCADA-like HMI Dashboards</a></th>
                     <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
                     <td><img src="/images/pe/checked.svg" alt="checked"></td>
                     <td><img src="/images/pe/checked.svg" alt="checked"></td>
                 </tr>
                 <tr>
-                    <th>Alarms & Notifications</th>
+                    <th><a href="/docs/user-guide/alarms/" target="_blank">Alarms & Notifications</a></th>
                     <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
                     <td><img src="/images/pe/checked.svg" alt="checked"></td>
                     <td><img src="/images/pe/checked.svg" alt="checked"></td>
                 </tr>
                 <tr>
-                    <th>Asset Management</th>
+                    <th><a href="/docs/user-guide/ui/assets/" target="_blank">Asset Management</a></th>
                     <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
                     <td><img src="/images/pe/checked.svg" alt="checked"></td>
                     <td><img src="/images/pe/checked.svg" alt="checked"></td>
                 </tr>
                 <tr>
-                    <th>Offline Data Computing and Storage<br>(Remote Site Scenarios)</th>
+                    <th><a href="/docs/edge/config/management/" target="_blank">Offline Data Computing and Storage<br>(Remote Site Scenarios)</a></th>
                     <td>Data Collection</td>
                     <td><img src="/images/pe/checked.svg" alt="checked"></td>
                     <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
                 </tr>
                 <tr>
-                    <th>Multi-Tenancy Support</th>
+                    <th><a href="/docs/user-guide/ui/tenants/" target="_blank">Multi-Tenancy Support</a></th>
                     <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
                     <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
                     <td><img src="/images/pe/checked.svg" alt="checked"></td>
@@ -193,13 +194,37 @@ description: Comprehensive software solutions for edge computing, providing data
                 </tr>
             </tbody>
     </table>
+    </main>
+</section>
+
+<section id="authored-quote">
+    <div id="background">
+        <div class="main1"></div><div class="small3"></div><div class="small4"></div>
+    </div>
+    <main>
+        <img class="h-auto" src="/images/case-studies/Dominic_Winkler.webp" title="ÖBB-Infrastruktur AG IT Enterprise Architect Dominic Winkler" alt="Dominic Winkler" width="1316" height="848">
+        <div class="text">
+            <h2>ÖBB-Infrastruktur AG</h2>
+            <p class="quote">“Thingsboard Edge gives us the invaluable ability to allow data to flow within our IT network without the need to bridge Firewalls and Public Internet.”</p>
+            <p class="author">Dominic Winkler</p>
+            <p class="title">IT Enterprise Architect</p>
+        </div>
+    </main>
+</section>
+
+<section id="get-in-touch">
+    <main>
+        <div class="block">
+            <h2 class="cta">Need offline-capable IoT solution?</h2>
+            <a id="Lets-Talk-Edge" href="/docs/contact-us/?subject=ThingsBoard%20Products" target="_blank"
+               class="button contact-us gtm_button">Let's talk Edge</a>
+        </div>
+    </main>
 </section>
 
 <section id="local-deployment">
     <main>
-        <div id="background">
-            <div class="main1"></div><div class="small1"></div><div class="small2"></div><div class="small3"></div><div class="small4"></div>
-        </div>
+        <h2>Edge Key Features</h2>
         <div class="block">
             <div class="feature-des"><h3 class="item-heading">Local Deployment and Storage</h3>
                 <p>Process and store data from local (edge) devices independently of the server. Sync updates with the server once connectivity is restored.</p>
@@ -215,6 +240,9 @@ description: Comprehensive software solutions for edge computing, providing data
 
 <section id="data-filtering">
     <main>
+        <div id="background">
+            <div class="main1"></div><div class="small1"></div><div class="small2"></div><div class="small3"></div>
+        </div>
         <div class="block">
             <div class="block-img">
                 <img src="/images/edge/data-filtering.svg" alt="data filtering">
@@ -266,122 +294,132 @@ description: Comprehensive software solutions for edge computing, providing data
         <div id="background">
             <div class="main3"></div><div class="small8"></div>
         </div>
-        <h3>More about ThingsBoard Edge strengths</h3>
-        <div class="cards row">
-            <div class="col-lg-6">
-                <div class="block">
-                    <img src="/images/edge/robust-icon.svg" alt="Robust and Efficient">
-                    <div>
-                        <h4 class="title">Robust and Efficient</h4>
-                        <p>A single Edge instance is capable of handling up to 1,000 devices, depending on the use-case and the capabilities of the deployed hardware.</p>
+        <h2>Why Edge Works</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-header" onclick="toggleFeature(this)">
+                    <div class="feature-icon">
+                        <img src="/images/edge/opensource-icon.svg" alt="100% Open-source">
                     </div>
+                    <h3 class="feature-title">100% Open-source</h3>
+                    <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="feature-content">
+                    <p>Licensed under Apache 2.0. Use freely in commercial products, host as SaaS/PaaS, or modify to fit your needs.</p>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="block"><img src="/images/edge/durable-icon.svg" alt="Durable">
-                    <div>
-                        <h4 class="title">Durable</h4>
-                        <p>The Edge system collects all messages and events in a persistent layer. Selected messages can be transferred to the server, as per necessity.</p>
+            <div class="feature-card">
+                <div class="feature-header" onclick="toggleFeature(this)">
+                    <div class="feature-icon">
+                        <img src="/images/edge/customizable-icon.svg" alt="Customizable">
                     </div>
+                    <h3 class="feature-title">Customizable</h3>
+                    <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="feature-content">
+                    <p>Flexible rule engine and customizable dashboards let you tailor Edge to your specific workflow and business requirements.</p>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="block"><img src="/images/edge/customizable-icon.svg" alt="Customizable">
-                    <div>
-                    <h4 class="title">Customizable</h4>
-                    <p>Enhancing functionality is effortless with our rule engine, alongside the ability to customize widgets and dashboards to your preference.</p>
+            <div class="feature-card">
+                <div class="feature-header" onclick="toggleFeature(this)">
+                    <div class="feature-icon">
+                        <img src="/images/edge/robust-icon.svg" alt="Robust and Efficient">
                     </div>
+                    <h3 class="feature-title">Robust and Reliable</h3>
+                    <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="feature-content">
+                    <p>Handles up to 1,000 devices per Edge instance while ensuring zero data loss through persistent local storage and automatic sync.</p>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="block"><img src="/images/edge/scalable-icon.svg" alt="Scalable">
-                    <div>
-                    <h4 class="title">Scalable</h4>
-                    <p>Distribute your computational tasks and data analysis across thousands of Edge instances for superior scalability.</p>
+            <div class="feature-card">
+                <div class="feature-header" onclick="toggleFeature(this)">
+                    <div class="feature-icon">
+                        <img src="/images/edge/scalable-icon.svg" alt="Scalable">
                     </div>
+                    <h3 class="feature-title">Scalable</h3>
+                    <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="feature-content">
+                    <p>Deploy thousands of Edge instances across distributed sites for horizontal scalability and distributed data processing.</p>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="block">
-                    <img src="/images/edge/opensource-icon.svg" alt="100% Open-source">
-                    <div>
-                        <h4 class="title">100% Open-source</h4>
-                        <p>ThingsBoard is licensed under Apache License 2.0, so you can use it in your commercial products for free. You can even host it as a SaaS or PaaS solution.</p>
+            <div class="feature-card">
+                <div class="feature-header" onclick="toggleFeature(this)">
+                    <div class="feature-icon">
+                        <img src="/images/edge/visualization-icon.svg" alt="Real-Time">
                     </div>
+                    <h3 class="feature-title">Real-Time</h3>
+                    <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="feature-content">
+                    <p>Instant access to critical data enables immediate decision-making. Local alarms trigger on-site without server connectivity.</p>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="block">
-                    <img src="/images/edge/visualization-icon.svg" alt="Real-Time Insights and Local Alarms">
-                    <div>
-                        <h4 class="title">Real-Time Insights and Local Alarms</h4>
-                        <p>Gain immediate access to critical data and insights, allowing for informed decision-making and timely responses to emerging challenges. Respond instantly to critical situations on-site, even without connectivity to the server.</p>
+            <div class="feature-card">
+                <div class="feature-header" onclick="toggleFeature(this)">
+                    <div class="feature-icon">
+                        <img src="/images/edge/offline-edge.svg" alt="Offline Capable">
                     </div>
+                    <h3 class="feature-title">Offline Capable</h3>
+                    <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="feature-content">
+                    <p>Operates independently when disconnected. Stores data locally and auto-syncs when connection restores—zero data loss.</p>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="block">
-                    <img src="/images/edge/offline-edge.svg" alt="Offline Capabilities">
-                    <div>
-                        <h4 class="title">Offline Capabilities </h4>
-                        <p>ThingsBoard Edge can continue to operate even when disconnected from the central server. It stores data locally and syncs with the server once connectivity is restored, ensuring no data is lost during outages.</p>
+            <div class="feature-card">
+                <div class="feature-header" onclick="toggleFeature(this)">
+                    <div class="feature-icon">
+                        <img src="/images/edge/low-latency.svg" alt="Responsive">
                     </div>
+                    <h3 class="feature-title">Responsive</h3>
+                    <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="feature-content">
+                    <p>Local processing delivers sub-second response times, critical for industrial automation and real-time control systems.</p>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="block">
-                    <img src="/images/edge/low-latency.svg" alt="Low Latency">
-                    <div>
-                        <h4 class="title">Low Latency</h4>
-                        <p>With local data processing capabilities, ThingsBoard Edge minimizes latency, enabling real-time data analysis and decision-making. This is particularly beneficial for applications requiring immediate response, such as industrial automation.</p>
+            <div class="feature-card">
+                <div class="feature-header" onclick="toggleFeature(this)">
+                    <div class="feature-icon">
+                        <img src="/images/edge/engine-icon.svg" alt="Logic-Driven">
                     </div>
+                    <h3 class="feature-title">Logic-Driven</h3>
+                    <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="feature-content">
+                    <p>Drag-and-drop rule chain designer lets you define custom logic for data processing, external integrations, and alarm notifications.</p>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="block">
-                    <img src="/images/edge/engine-icon.svg" alt="Rule engine">
-                    <div>
-                        <h4 class="title">Rule engine</h4>
-                        <p>Process incoming device data with flexible rule chains based on entity attributes or message content. Forward data to external systems or trigger alarms using custom logic. Configure complex notification chains on alarms. Enrich server-side functionality or manipulate your devices with highly customizable rules. Define your application logic with drag-n-drop rule chain designer.</p>
+            <div class="feature-card">
+                <div class="feature-header" onclick="toggleFeature(this)">
+                    <div class="feature-icon">
+                        <img src="/images/edge/friendly-icon.svg" alt="User-Friendly">
                     </div>
+                    <h3 class="feature-title">User-Friendly</h3>
+                    <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="block">
-                    <img src="/images/edge/friendly-icon.svg" alt="User-Friendly">
-                    <div>
-                        <h4 class="title">User-Friendly</h4>
-                        <p>The intuitive interface and straightforward setup process make ThingsBoard Edge accessible for users with varying levels of technical expertise, enabling faster deployment and easier management. The platform supports various protocols (like MQTT, CoAP, and HTTP), making it easy to integrate with diverse devices and systems.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-</section>
-
-
-
-<section id="minimal-requirements">
-    <main>
-        <div id="background">
-            <div class="main1"></div><div class="small3"></div><div class="small4"></div>
-        </div>
-        <h3>Minimal requirements</h3>
-        <div class="cards row">
-            <div class="col-lg-6">
-                <div class="block">
-                    <div>
-                        <h4 class="title">ThingsBoard Edge</h4>
-                        <p><b>Platform:</b> Compact server (e.g, Intel NUC, mini-PC, embedded PC)<br><b>CPU:</b> 2-core x86-64 processor<br><b>RAM:</b> 2 GB<br><b>Storage:</b> 20 GB of free disk space<br><b>OS:</b> Linux (Debian, CentOS) or Windows<br><b>Java VM:</b> JDK 8+ (JDK 17 preferred)</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="block">
-                   <div> 
-                       <h4 class="title">ThingsBoard IoT Gateway</h4>
-                        <p><b>Platform:</b> Low-spec server (e.g, Raspberry Pi, Intel NUC)<br><b>CPU:</b> Single-core x86-x64 processor<br><b>RAM:</b> 1 GB<br><b>Storage:</b> 10 GB of free disk space<br><b>OS:</b> Linux (Debian, CentOS)<br></p>
-                   </div>
+                <div class="feature-content">
+                    <p>Intuitive interface and multi-protocol support (MQTT, CoAP, HTTP) enable fast deployment across diverse device ecosystems.</p>
                 </div>
             </div>
         </div>
@@ -389,11 +427,20 @@ description: Comprehensive software solutions for edge computing, providing data
 </section>
 
 <section id="bottom">
-    <a id="Products_Edge_TryEdgeNow" href="/docs/edge/getting-started/" class="bottom-button gtm_button">Try Edge now</a>
+    <div class="contact-us-banner">
+        <div class="contact-us-banner-content">
+            <h2>Ready to bring intelligence to the network edge?</h2>
+            <div class="contact-us-banner-buttons">
+                <a id="Products_Edge_TryEdgeNow" href="/docs/edge/getting-started/" target="_blank" class="bottom-button gtm_button">Get started now</a>
+            </div>
+        </div>
+        <img src="/images/edge/offline-edge.svg" alt="Edge icon">
+    </div>
 </section>
 
+
 <script>
-function switchProductTab(tabId) {
+function switchProductTab(tabId, event) {
   var tabs = document.querySelectorAll('.scenario-tab');
   tabs.forEach(function(tab) {
     tab.classList.remove('active');
@@ -405,5 +452,33 @@ function switchProductTab(tabId) {
   event.target.closest('.scenario-tab').classList.add('active');
   var category = document.getElementById('scenario-cat-' + tabId);
   if (category) category.classList.add('active');
+}
+
+function toggleFeature(headerElement) {
+  var card = headerElement.closest('.feature-card');
+  var allCards = document.querySelectorAll('.feature-card');
+  var cardsArray = Array.from(allCards);
+
+  var cardIndex = cardsArray.indexOf(card);
+  var rowIndex = Math.floor(cardIndex / 3);
+
+  var rowStart = rowIndex * 3;
+  var rowEnd = Math.min(rowStart + 3, cardsArray.length);
+  var rowCards = cardsArray.slice(rowStart, rowEnd);
+
+  var isRowOpen = rowCards.some(function(c) { return c.classList.contains('open'); });
+
+  rowCards.forEach(function(c) {
+    if (isRowOpen) {
+      c.classList.remove('open');
+    } else {
+      c.classList.add('open');
+    }
+  });
+
+  allCards.forEach(function(c) { c.classList.remove('active'); });
+  if (!isRowOpen) {
+    card.classList.add('active');
+  }
 }
 </script>
