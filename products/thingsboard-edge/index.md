@@ -459,26 +459,37 @@ function toggleFeature(headerElement) {
   var allCards = document.querySelectorAll('.feature-card');
   var cardsArray = Array.from(allCards);
 
-  var cardIndex = cardsArray.indexOf(card);
-  var rowIndex = Math.floor(cardIndex / 3);
+  if (window.innerWidth <= 414) {
+    allCards.forEach(function(c) {
+      if (c !== card) {
+        c.classList.remove('open');
+        c.classList.remove('active');
+      }
+    });
+    card.classList.toggle('open');
+    card.classList.toggle('active');
+  } else {
+    var cardIndex = cardsArray.indexOf(card);
+    var rowIndex = Math.floor(cardIndex / 3);
 
-  var rowStart = rowIndex * 3;
-  var rowEnd = Math.min(rowStart + 3, cardsArray.length);
-  var rowCards = cardsArray.slice(rowStart, rowEnd);
+    var rowStart = rowIndex * 3;
+    var rowEnd = Math.min(rowStart + 3, cardsArray.length);
+    var rowCards = cardsArray.slice(rowStart, rowEnd);
 
-  var isRowOpen = rowCards.some(function(c) { return c.classList.contains('open'); });
+    var isRowOpen = rowCards.some(function(c) { return c.classList.contains('open'); });
 
-  rowCards.forEach(function(c) {
-    if (isRowOpen) {
-      c.classList.remove('open');
-    } else {
-      c.classList.add('open');
+    rowCards.forEach(function(c) {
+      if (isRowOpen) {
+        c.classList.remove('open');
+      } else {
+        c.classList.add('open');
+      }
+    });
+
+    allCards.forEach(function(c) { c.classList.remove('active'); });
+    if (!isRowOpen) {
+      card.classList.add('active');
     }
-  });
-
-  allCards.forEach(function(c) { c.classList.remove('active'); });
-  if (!isRowOpen) {
-    card.classList.add('active');
   }
 }
 </script>
