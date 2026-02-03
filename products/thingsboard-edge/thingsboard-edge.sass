@@ -818,305 +818,190 @@
       opacity: 1
       transform: translate3d(0, 0, 0)
 
-  @media screen and (min-width: 750px)
-    #hero
-      #hero-content
-        .edge-title
-          font-size: 36px
-        .edge-description
-          font-size: 20px
-          margin-bottom: 60px
+  @media screen and (max-width: 414px)
+    #thingsboard-edge
+      #hero
+        #hero-content
+          .edge-title
+            font-size: 18px
+          .edge-description
+            font-size: 12px
+            line-height: 14px
+            margin-bottom: 24px
+          .try-edge
+            font-size: 14px
+            line-height: 36px
+            padding: 0 12px
     #edgeContent
-      #local-deployment, #data-filtering, #local-alarms, #batch-update
-        .block
-          .feature-des, .block-img
-            width: 80%
+      #intro
+        .intro_title
+          font-size: 24px
+          margin-bottom: 40px
+        .stats-container
+          display: grid
+          grid-template-columns: repeat(2, 1fr)
+          gap: 20px
+        .stat-block
+          padding: 16px 12px
+          &:not(:last-child)::after
+            display: none
+        .stat-number
+          font-size: 32px
+          margin-bottom: 8px
+        .stat-label
+          font-size: 14px
+      #product
+        .product-title
+          font-size: 28px
+          margin-top: 20px
+          margin-bottom: 20px
+        .scenario-tabs
+          flex: none
+          width: 100%
+        .scenario-tab
+          padding: 16px 18px
+          font-size: 16px
+          .tab-header .tab-name
+            font-size: 18px
+          .tag
+            font-size: 13px
+            padding: 4px 10px
+        .scenario-wrapper
+          flex-direction: column
+          gap: 20px
+        .scenario-category
+          min-width: unset
+          width: 100%
+          div
+            padding: 24px 16px
+          img
+            max-width: 100%
+          .cta-button
+            font-size: 16px
+            padding: 10px 24px
       #matrix
+        margin: 40px 0 0
+        padding: 0 0 60px
         h2
-          font-size: 42px
-          line-height: 63px
+          font-size: 24px
+          margin-bottom: 20px
+        p
+          font-size: 15px
+          margin-bottom: 30px
         #backg-matrix
           .gateway, .edge, .cloud
-            padding: 0 20px
-            width: 20%
-        table
-          thead
-            font-size: 30px
-            tr
-              th
-                width: 20%
-                padding: 0 0 10px
-                font-size: 20px
-                a
-                  text-decoration: none
-                  transition: color 0.2s ease
-                  &:hover
-                    color: #006988
-                    text-decoration: underline
-              td
-                width: 40%
-          tbody
-            tr
-              th, a
-                padding-right: 30px
-                font-size: 18px
-              td
-                font-size: 20px
-                img
-                  width: unset
-
-  @media screen and (max-width: 750px)
-    #matrix
-      h3
-        font-size: 38px
-        line-height: 42px
+            width: 22%
+            top: 120px
+          .coln
+            height: 600px
+            .head
+              height: 70px
         table
           width: 100%
+          margin: 40px 0 16px
           thead
-            font-size: 20px
             tr
+              height: 80px
               th
-                width: 20%
-                padding: 0 0 2px
-                font-size: 16px
-              td
-                width: 40%
+                font-size: 9px
+                padding: 30px 0 20px
           tbody
             tr
+              height: 48px
               th, a
-                font-size: 16px
+                font-size: 10px
+                padding-right: 4px
               td
-                font-size: 18px
+                font-size: 10px
                 img
-                  width: unset
-
-  @media screen and (min-width: 1025px)
-    section, header
-      main
-        max-width: 100%
-    footer
-      main, div.main-div
-        max-width: 100%
-    #edgeContent
-      #intro
-        .intro_title
-          padding: 0 5%
-        .labeling
-          padding: 0 8%
-      #local-deployment, #data-filtering, #local-alarms, #batch-update
-        .block
-          flex-direction: row
-          .feature-des, .block-img
-            width: calc(50% - 80px)
-            order: unset
-          .block-img img
-              margin: unset
-      #local-alarms #background .main2
-        height: 405px
-
-  @media screen and (min-width: 1250px)
-    #hero
-      #hero-content
-        .edge-title
-          margin-bottom: 60px
-          font-size: 64px
-        .edge-description
-          font-size: 28px
-          margin-bottom: 80px
-        .try-edge
-          line-height: 60px
-          font-size: 28px
-          padding: 0 40px
-          margin: 0 4px
-          border-width: 3px
-    #edgeContent
-      max-width: 1400px
-      #intro
-        .intro_title
-          padding: 0 7%
-        .labeling
-          padding: 0 13%
-
-  @media screen and (min-width: 1500px)
-    #edgeContent
-      max-width: 1400px
-      #intro
-        .intro_title
-          padding: 0 10%
-        .labeling
-          padding: 0 18%
-      #batch-update .block
-        padding-top: 40px
-      #local-alarms #background .main2
-        height: 485px
-
-  @media screen and (max-width: 960px)
-    .stats-container
-      gap: 30px
-    .stat-block
-      padding: 24px 16px
-      &:not(:last-child)::after
-        height: 50px
-    .stat-number
-      font-size: 48px
-      margin-bottom: 8px
-    .stat-label
-      font-size: 16px
-
-  @media screen and (max-width: 750px)
-    padding-top: 60px
-    margin-bottom: 60px
-    .intro_title
-      margin-bottom: 48px
-    .stats-container
-      flex-direction: column
-      gap: 40px
-    .stat-block
-      width: 100%
-      padding: 24px 20px
-      &:not(:last-child)::after
-        display: none
-      &:not(:last-child)
-        border-bottom: 1px solid #E0E0E0
-        padding-bottom: 40px
-    .stat-number
-      font-size: 56px
-    .stat-label
-      font-size: 17px
-
-    @media screen and (max-width: 1024px)
+                  width: 22px
       #authored-quote
+        margin-top: 80px
+        padding: 20px 12px
         main
           grid-template-columns: 1fr
-          padding: 40px 32px
+          padding: 20px 16px
+          gap: 20px
         img
-          grid-column: 1
+          width: 120px
+          height: 120px
           margin: 0 auto
+          grid-column: 1
         .text
           grid-column: 1
           border-left: none
           padding-left: 0
-          padding-top: 24px
+          padding-top: 20px
           border-top: 4px solid #009688
-
-          @media screen and (max-width: 768px)
-            #authored-quote
-              padding: 40px 16px
-              main
-                padding: 32px 24px
-              img
-                width: 150px
-                height: 150px
-              .text
-                h2
-                  font-size: 20px
-                .quote
-                  font-size: 15px
-
-    @media screen and (max-width: 768px)
-      #get-in-touch
-        padding: 40px 16px
+          h2
+            font-size: 18px
+          .quote
+            font-size: 14px
+          .author
+            font-size: 16px
+      #local-deployment, #data-filtering, #local-alarms, #batch-update
+        h2
+          font-size: 28px
+          margin: 40px 0 8px
         .block
+          padding: 30px 0
+          .feature-des
+            padding-top: 20px !important
+          .block-img
+            img
+              max-width: 100%
+      #get-in-touch
+        padding: 40px 12px
+        .block
+          padding: 24px 16px
           flex-direction: column
           text-align: center
-          padding: 32px 24px
-          gap: 24px
-        .cta
-          font-size: 24px
-          @media screen and (max-width: 1200px)
-            .scenario-wrapper
-              gap: 32px
-            .scenario-tabs
-              flex: 0 0 280px
-            .scenario-tab
-              font-size: 18px
-              padding: 18px 20px
-          @media screen and (max-width: 960px)
-            padding: 60px 0
-            .product-title
-              font-size: 36px
-              margin-bottom: 48px
-            .scenario-wrapper
-              flex-direction: column
-            .scenario-tabs
-              width: 100%
-              flex-direction: row
-              justify-content: flex-start
-              flex-wrap: wrap
-            .scenario-tab
-              flex: 1
-              min-width: 150px
-              text-align: center
-            .scenario-category div
-              padding: 36px 28px
-          @media screen and (max-width: 600px)
-            padding: 40px 0
-            .product-title
-              font-size: 28px
-              margin-bottom: 36px
-            .scenario-tabs
-              flex-direction: column
-            .scenario-tab
-              width: 100%
-              text-align: left
-            .scenario-category div
-              padding: 28px 20px
-            .scenario-category h3
-              font-size: 24px
-              margin-bottom: 24px
-            .scenario-category p
-              font-size: 15px
-
-      @media screen and (max-width: 1024px)
-        .bottom
-          .contact-us-banner
-            padding: 50px 60px
-            gap: 40px
-          .contact-us-banner-content
-            h2
-              font-size: 36px
-          img
-            width: 300px
-            flex: 0 0 300px
-
-      @media screen and (max-width: 768px)
-        .bottom
-          padding: 60px 16px
-          .contact-us-banner
-            flex-direction: column
-            text-align: center
-            padding: 40px 32px
-            gap: 32px
-          .contact-us-banner-content
-            h2
-              font-size: 28px
-              margin-bottom: 24px
-          .contact-us-banner-buttons
-            justify-content: center
-          img
-            width: 240px
-            flex: 0 0 auto
-
-    @media screen and (max-width: 1200px)
-      #bottom-features
-        .features-grid
-          grid-template-columns: repeat(2, 1fr)
           gap: 20px
-
-    @media screen and (max-width: 768px)
+        .cta
+          font-size: 22px
+        .button
+          font-size: 16px
+          padding: 12px 28px
       #bottom-features
-        padding: 60px 16px
-        h3
-          font-size: 32px
+        padding: 40px 12px
+        h2
+          font-size: 28px
           margin-bottom: 40px
         .features-grid
-          grid-template-columns: 1fr
-          gap: 16px
-        .feature-header
-          padding: 20px
+          grid-template-columns: repeat(3, 1fr)
           gap: 12px
+        .feature-header
+          padding: 16px 8px
+          flex-direction: column
+          gap: 8px
         .feature-icon
-          width: 40px
-          height: 40px
+          width: 48px
+          height: 48px
           img
-            width: 24px
+            width: 36px
+            height: 36px
+        .feature-title
+          display: none
+        .chevron
+          display: none
+        .feature-content
+          display: none
+      #bottom
+        padding: 40px 12px
+        .contact-us-banner
+          flex-direction: column
+          text-align: center
+          padding: 28px 20px
+          gap: 20px
+        .contact-us-banner-content
+          h2
+            font-size: 22px
+            margin-bottom: 20px
+        .contact-us-banner-buttons
+          justify-content: center
+        .bottom-button
+          font-size: 16px
+          padding: 12px 24px
+        img
+          width: 180px
+          flex: 0 0 auto
