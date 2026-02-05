@@ -115,7 +115,6 @@ description: Comprehensive software solutions for edge computing, providing data
         <div class="gateway"><div class="coln"><div class="head"></div></div></div>
     </div>
     <h2>Which ThingsBoard Product Is Right for You?</h2>
-    <p>Compare IoT Gateway, Edge, and Server capabilities to find the best fit for your IoT infrastructure and connectivity requirements.</p>
     <table>
             <thead>
                 <tr>
@@ -459,7 +458,7 @@ function toggleFeature(headerElement) {
   var allCards = document.querySelectorAll('.feature-card');
   var cardsArray = Array.from(allCards);
 
-  if (window.innerWidth <= 414) {
+  if (window.innerWidth <= 768) {
     allCards.forEach(function(c) {
       if (c !== card) {
         c.classList.remove('open');

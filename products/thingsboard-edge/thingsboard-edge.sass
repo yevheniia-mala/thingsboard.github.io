@@ -6,7 +6,7 @@
       &::after
         opacity: 0
   #hero
-    height: 100vh //calc(100vh + 5px)
+    height: 100vh
     padding-top: 0
     position: relative
     overflow: hidden
@@ -163,10 +163,6 @@
       margin-bottom: 10px
       padding-top: 25px
       color: #212924
-      .intro_title
-        padding: 0
-        text-align: center
-        margin-bottom: 64px
       .stats-container
         display: flex
         justify-content: space-between
@@ -202,7 +198,6 @@
         line-height: 1.4
 
     #product
-      padding: 10px 0
       #background
         .small1
           top: -50px
@@ -333,11 +328,6 @@
         font-size: 42px
         font-weight: 600
         color: #212529
-      p
-        text-align: center
-        margin-bottom: 54px
-        font-size: 20px
-        line-height: 1.6
       #backg-matrix
         position: relative
         margin-left: -20px
@@ -348,7 +338,7 @@
           width: 20%
           position: absolute
           z-index: -1
-          top: 185px
+          top: 100px
         .coln
           height: 840px
           border-radius: 6px
@@ -410,7 +400,7 @@
               vertical-align: center
               font-weight: 600
               font-size: 16px
-              padding: 46px 0 30px
+              padding: 0 0 50px
               &:nth-child(1n)
                 color: white
               a
@@ -506,10 +496,6 @@
         opacity: 0
         transform: translateY(50px)
         animation: slideUp 0.8s ease-out forwards
-      @keyframes slideUp
-        to
-          opacity: 1
-          transform: translateY(0)
       #background
         position: absolute
         top: 0
@@ -549,6 +535,9 @@
           box-shadow: 0 4px 12px rgba(0,150,136,0.4)
 
     #local-deployment, #data-filtering, #local-alarms, #batch-update
+      max-width: 1920px
+      margin: 0 auto
+      padding: 0 100px
       h2
         text-align: center
         margin: 60px 0 10px
@@ -556,37 +545,55 @@
         font-weight: 600
         color: #212529
       .block
-        justify-content: space-between
         display: flex
+        flex-direction: row
         align-items: center
-        flex-direction: column
-        padding: 50px 0
-        .feature-des, img
-          width: 100%
+        justify-content: space-between
+        gap: 60px
+        padding: 80px 0
+        max-width: 1400px
+        margin: 0 auto
+        .feature-des
+          flex: 0 0 40%
+          order: 1
         .block-img
-          text-align: center
+          flex: 1
           order: 2
           img
-            margin-top: 32px
             width: 100%
-            max-width: fit-content
+            max-width: 100%
+            height: auto
+
+    #data-filtering, #batch-update
+      .block
         .feature-des
+          order: 2
+        .block-img
           order: 1
 
-    #local-deployment .block .feature-des
+    #local-deployment .block
       padding-top: 100px
 
     #data-filtering .block
       padding: 60px 0
 
-    #local-alarms .block .feature-des
-      padding-top: 200px
-      h2, a, h3.item-heading
-        color: #fff
-      p
-        color: #868686
-      .read-more-button .arrow
-        filter: brightness(100%) invert(100%)
+    #local-alarms
+      .block
+        position: relative
+      #background
+        position: absolute
+        top: 0
+        left: 50%
+        height: 100%
+        z-index: 0
+      .block .feature-des
+        padding-top: 200px
+        h2, a, h3.item-heading
+          color: #fff
+        p
+          color: #868686
+        .read-more-button .arrow
+          filter: brightness(100%) invert(100%)
 
     #batch-update .block
       padding: 80px 0 120px
@@ -688,10 +695,6 @@
         opacity: 0
         transform: translateY(50px)
         animation: slideUp 0.8s ease-out forwards
-      @keyframes slideUp
-        to
-          opacity: 1
-          transform: translateY(0)
       .contact-us-banner-content
         flex: 1
         h2
@@ -818,265 +821,11 @@
       opacity: 1
       transform: translate3d(0, 0, 0)
 
-  // Large desktop (≤1400px)
-  @media screen and (max-width: 1400px)
-    #edgeContent
-      #product
-        .scenario-wrapper
-          max-width: 1200px
-        .scenario-tabs
-          flex: 0 0 420px
-        .scenario-category
-          min-width: 700px
+  @keyframes slideUp
+    to
+      opacity: 1
+      transform: translateY(0)
 
-  // Desktop/Laptop (≤1200px)
-  @media screen and (max-width: 1200px)
-    #thingsboard-edge
-      #hero
-        #hero-content
-          .edge-title
-            font-size: 36px
-          .edge-description
-            font-size: 20px
-            line-height: 28px
-          .try-edge
-            font-size: 18px
-            line-height: 48px
-            padding: 0 24px
-    #edgeContent
-      h1
-        font-size: 28px
-        line-height: 44px
-        a
-          font-size: 28px
-      h2, h3.item-heading
-        font-size: 32px
-        line-height: 48px
-      h3:not(.item-heading)
-        font-size: 28px
-      #intro
-        .stats-container
-          gap: 24px
-        .stat-number
-          font-size: 52px
-        .stat-label
-          font-size: 16px
-      #product
-        .product-title
-          font-size: 36px
-        .scenario-wrapper
-          max-width: 100%
-          gap: 24px
-        .scenario-tabs
-          flex: 0 0 360px
-        .scenario-tab
-          padding: 16px 20px
-          .tab-header .tab-name
-            font-size: 20px
-        .scenario-category
-          min-width: 500px
-          div
-            padding: 32px
-      #matrix
-        h2
-          font-size: 36px
-        p
-          font-size: 18px
-        table
-          thead
-            font-size: 14px
-            tr th
-              font-size: 14px
-          tbody tr
-            th, a
-              font-size: 14px
-            td
-              font-size: 13px
-      #authored-quote
-        main
-          gap: 24px
-        img
-          width: 160px
-          height: 160px
-        .text
-          h2
-            font-size: 22px
-          .quote
-            font-size: 15px
-      #local-deployment, #data-filtering, #local-alarms, #batch-update
-        h2
-          font-size: 36px
-      #bottom-features
-        h2
-          font-size: 36px
-        .features-grid
-          gap: 16px
-        .feature-header
-          padding: 20px
-        .feature-icon
-          flex: 0 0 56px
-          width: 56px
-          height: 56px
-          img
-            width: 48px
-            height: 48px
-        .feature-title
-          font-size: 16px
-      #get-in-touch
-        .block
-          padding: 32px 40px
-        .cta
-          font-size: 28px
-        .button
-          font-size: 18px
-          padding: 14px 32px
-      #bottom
-        .contact-us-banner
-          padding: 10px 40px
-          gap: 40px
-        .contact-us-banner-content h2
-          font-size: 28px
-        img
-          flex: 0 0 220px
-          width: 220px
-
-  // Tablet landscape (≤992px)
-  @media screen and (max-width: 992px)
-    #thingsboard-edge
-      #hero
-        #hero-content
-          .edge-title
-            font-size: 32px
-          .edge-description
-            font-size: 18px
-            line-height: 26px
-            margin-bottom: 36px
-          .try-edge
-            font-size: 16px
-            line-height: 44px
-            padding: 0 20px
-    #edgeContent
-      h1
-        font-size: 26px
-        line-height: 40px
-        a
-          font-size: 26px
-      h2, h3.item-heading
-        font-size: 28px
-        line-height: 42px
-      h3:not(.item-heading)
-        font-size: 24px
-      p
-        font-size: 16px
-        line-height: 24px
-      #intro
-        .intro_title
-          margin-bottom: 48px
-        .stats-container
-          flex-wrap: wrap
-          gap: 20px
-        .stat-block
-          flex: 1 1 calc(50% - 20px)
-          min-width: 200px
-          &:not(:last-child)::after
-            display: none
-        .stat-number
-          font-size: 48px
-        .stat-label
-          font-size: 15px
-      #product
-        .product-title
-          font-size: 32px
-        .scenario-wrapper
-          flex-direction: column
-          gap: 24px
-        .scenario-tabs
-          flex: none
-          width: 100%
-        .scenario-category
-          min-width: unset
-          width: 100%
-          div
-            padding: 24px
-      #matrix
-        h2
-          font-size: 32px
-        p
-          font-size: 16px
-        #backg-matrix
-          .gateway, .edge, .cloud
-            top: 150px
-          .coln
-            height: 720px
-        table
-          thead
-            font-size: 13px
-            tr
-              height: 90px
-              th
-                font-size: 13px
-                padding: 36px 0 24px
-          tbody tr
-            height: 56px
-            th, a
-              font-size: 13px
-            td
-              font-size: 12px
-              img
-                width: 28px
-      #authored-quote
-        margin-top: 100px
-        main
-          grid-template-columns: 140px 1fr
-          gap: 24px
-          padding: 20px
-        img
-          width: 140px
-          height: 140px
-        .text
-          padding-left: 24px
-          h2
-            font-size: 20px
-            margin-bottom: 16px
-          .quote
-            font-size: 15px
-            margin-bottom: 20px
-      #local-deployment, #data-filtering, #local-alarms, #batch-update
-        h2
-          font-size: 32px
-        .block
-          padding: 40px 0
-      #bottom-features
-        h2
-          font-size: 32px
-          margin-bottom: 40px
-        .features-grid
-          grid-template-columns: repeat(2, 1fr)
-      #get-in-touch
-        .block
-          padding: 28px 32px
-          gap: 24px
-        .cta
-          font-size: 24px
-        .button
-          font-size: 16px
-          padding: 12px 28px
-      #bottom
-        .contact-us-banner
-          flex-direction: column
-          text-align: center
-          padding: 32px
-          gap: 24px
-        .contact-us-banner-content h2
-          font-size: 26px
-        .contact-us-banner-buttons
-          justify-content: center
-        img
-          flex: 0 0 auto
-          width: 200px
-          order: -1
-
-  // Tablet portrait (≤768px)
   @media screen and (max-width: 768px)
     #thingsboard-edge
       #hero
@@ -1107,8 +856,6 @@
         font-size: 15px
         line-height: 23px
       #intro
-        .intro_title
-          margin-bottom: 40px
         .stats-container
           gap: 16px
         .stat-block
@@ -1118,73 +865,70 @@
         .stat-label
           font-size: 14px
       #product
+        padding: 40px 20px 10px
         .product-title
           font-size: 28px
-          margin-top: 24px
-          margin-bottom: 24px
+          margin-top: 20px
+          margin-bottom: 20px
+        .scenario-wrapper
+          flex-direction: column
+          gap: 24px
+          align-items: center
+        .scenario-tabs
+          flex: none
+          width: 100%
+          max-width: 520px
         .scenario-tab
-          padding: 14px 16px
-          font-size: 15px
-          .tab-header .tab-name
-            font-size: 18px
-          .tag
-            font-size: 12px
-            padding: 5px 12px
-          &.active p
-            font-size: 14px
+          padding: 16px 20px
+          font-size: 18px
+          .tab-header
+            .tab-name
+              font-size: 20px
         .scenario-category
+          min-width: auto
+          width: 100%
+          &.active
+            display: block
           div
-            padding: 20px 16px
+            padding: 24px
+          img
+            margin-bottom: 24px
           .cta-button
             font-size: 18px
             padding: 10px 28px
       #matrix
-        margin: 30px 0 0
-        padding: 0 0 70px
+        margin: 40px 0 0
+        padding: 0 20px 88px
         h2
-          font-size: 28px
-          margin-bottom: 24px
-        p
-          font-size: 15px
-          margin-bottom: 40px
+          font-size: 26px
+          line-height: 38px
+          margin-bottom: 65px
         #backg-matrix
-          display: none
+          margin: 0
+          width: 100%
+          .gateway, .edge, .cloud
+            top: 100px
         table
           width: 100%
-          margin: 30px 0 16px
-          border-collapse: collapse
+          margin: 40px 0 16px
           thead
-            font-size: 12px
+            font-size: 20px
             tr
-              height: 70px
               th
-                font-size: 12px
-                padding: 20px 6px
-                vertical-align: middle
-                &:nth-child(2)
-                  background-color: rgba(122, 77, 195, 0.15)
-                  color: #7A4DC3
-                &:nth-child(3)
-                  background-color: rgba(0, 150, 136, 0.15)
-                  color: #009688
-                &:nth-child(4)
-                  background-color: rgba(42, 125, 236, 0.15)
-                  color: #2A7DEC
-          tbody tr
-            height: 48px
-            th, a
-              font-size: 12px
-            td
-              font-size: 11px
-              padding: 6px
-              &:nth-child(2)
-                background-color: rgba(122, 77, 195, 0.08)
-              &:nth-child(3)
-                background-color: rgba(0, 150, 136, 0.08)
-              &:nth-child(4)
-                background-color: rgba(42, 125, 236, 0.08)
-              img
-                width: 26px
+                width: 20%
+                padding: 0 0 2px
+                font-size: 16px
+              td
+                width: 40%
+          tbody
+            tr
+              th, a
+                font-size: 16px
+              td
+                padding: 9px
+                font-size: 16px
+                img
+                  width: 32px
       #authored-quote
         margin-top: 80px
         padding: 20px 16px
@@ -1211,14 +955,31 @@
             font-size: 14px
           .author
             font-size: 16px
+      #local-alarms
+        #background
+          .main2
+            top: 0
+            height: 100%
       #local-deployment, #data-filtering, #local-alarms, #batch-update
+        padding: 0 20px
         h2
+          text-align: center
           font-size: 28px
           margin: 50px 0 8px
         .block
+          flex-direction: column
+          gap: 24px
           padding: 36px 0
           .feature-des
+            flex: 1
+            order: 1
+            text-align: center
             padding-top: 40px !important
+          .block-img
+            flex: 1
+            order: 2
+            img
+              max-width: 100%
       #bottom-features
         padding: 40px 16px
         h2
@@ -1226,7 +987,11 @@
           margin-bottom: 36px
         .features-grid
           grid-template-columns: 1fr
-          gap: 12px
+        .feature-card
+          &:last-child:nth-child(odd)
+            grid-column: auto
+            max-width: none
+            margin: 0
         .feature-header
           padding: 18px 16px
         .feature-icon
@@ -1263,385 +1028,48 @@
         img
           width: 180px
 
-  // Mobile landscape (≤576px)
   @media screen and (max-width: 576px)
-    #thingsboard-edge
-      #hero
-        #hero-content
-          .edge-title
-            font-size: 24px
-            margin-bottom: 14px
-          .edge-description
-            font-size: 14px
-            line-height: 20px
-            margin-bottom: 28px
-          .try-edge
-            font-size: 14px
-            line-height: 38px
-            padding: 0 14px
-    #edgeContent
-      h1
-        font-size: 22px
-        line-height: 32px
-        a
-          font-size: 22px
-      h2, h3.item-heading
-        font-size: 24px
-        line-height: 34px
-      h3:not(.item-heading)
-        font-size: 20px
-      p
-        font-size: 14px
-        line-height: 22px
-      a
-        font-size: 16px
+    #encyclopedia
+      padding: 0 10px
       #intro
         padding-top: 20px
-        .intro_title
-          font-size: 22px
           margin-bottom: 32px
         .stats-container
           display: grid
           grid-template-columns: repeat(2, 1fr)
           gap: 16px
         .stat-block
-          padding: 16px 12px
+          padding: 8px 2px
         .stat-number
           font-size: 36px
           margin-bottom: 8px
         .stat-label
-          font-size: 13px
-      #product
-        .product-title
-          font-size: 26px
-          margin-top: 20px
-          margin-bottom: 20px
-        .scenario-tab
-          padding: 14px 14px
-          .tab-header .tab-name
-            font-size: 16px
-          .tag
-            font-size: 12px
-            padding: 4px 10px
-          &.active p
-            font-size: 14px
-        .scenario-category
-          div
-            padding: 18px 12px
-          .cta-button
-            font-size: 16px
-            padding: 10px 24px
+          font-size: 18px
       #matrix
-        margin: 30px 0 0
-        padding: 0 0 50px
         h2
-          font-size: 24px
-          margin-bottom: 16px
-        p
-          font-size: 14px
-          margin-bottom: 28px
+          font-size: 26px
+          line-height: 38px
+          margin-bottom: -10px
         #backg-matrix
-          display: none
+          .gateway, .edge, .cloud
+            top: 90px
         table
           width: 100%
-          margin: 24px 0 16px
-          border-collapse: collapse
+          height: 100%
           thead
-            font-size: 10px
+            font-size: 20px
             tr
-              height: 65px
               th
-                font-size: 10px
-                padding: 16px 4px
-                vertical-align: middle
-                &:nth-child(2)
-                  background-color: rgba(122, 77, 195, 0.15)
-                  color: #7A4DC3
-                &:nth-child(3)
-                  background-color: rgba(0, 150, 136, 0.15)
-                  color: #009688
-                &:nth-child(4)
-                  background-color: rgba(42, 125, 236, 0.15)
-                  color: #2A7DEC
-          tbody tr
-            height: 44px
-            th, a
-              font-size: 10px
-              padding-right: 4px
-            td
-              font-size: 9px
-              padding: 4px
-              &:nth-child(2)
-                background-color: rgba(122, 77, 195, 0.08)
-              &:nth-child(3)
-                background-color: rgba(0, 150, 136, 0.08)
-              &:nth-child(4)
-                background-color: rgba(42, 125, 236, 0.08)
-              img
-                width: 20px
-      #authored-quote
-        margin-top: 60px
-        padding: 16px 12px
-        main
-          display: flex
-          flex-direction: column
-          padding: 18px 14px
-          gap: 14px
-        img
-          width: 110px
-          height: 110px
-          margin: 0 auto
-          order: 1
-        .text
-          order: 2
-          border-left: none
-          padding-left: 0
-          padding-top: 14px
-          border-top: 4px solid #009688
-          text-align: center
-          h2
-            font-size: 18px
-            margin-bottom: 14px
-          .quote
-            font-size: 13px
-            margin-bottom: 18px
-          .author
-            font-size: 15px
-          .title
-            font-size: 13px
-      #local-deployment, #data-filtering, #local-alarms, #batch-update
-        h2
-          font-size: 26px
-          margin: 36px 0 6px
-        .block
-          padding: 28px 0
-          .feature-des
-            padding-top: 16px !important
-          .block-img img
-            max-width: 100%
-      #bottom-features
-        padding: 32px 12px
-        h2
-          font-size: 26px
-          margin-bottom: 28px
-        .features-grid
-          gap: 10px
-        .feature-header
-          padding: 14px 12px
-          gap: 12px
-        .feature-icon
-          flex: 0 0 48px
-          width: 48px
-          height: 48px
-          img
-            width: 36px
-            height: 36px
-        .feature-title
-          font-size: 14px
-        .feature-content p
-          font-size: 14px
-      #get-in-touch
-        padding: 40px 12px
-        .block
-          padding: 20px 16px
-          gap: 16px
-        .cta
-          font-size: 20px
-        .button
-          font-size: 15px
-          padding: 10px 24px
-      #bottom
-        padding: 50px 12px
-        .contact-us-banner
-          padding: 24px 18px
-          gap: 18px
-        .contact-us-banner-content h2
-          font-size: 22px
-          margin-bottom: 20px
-        .contact-us-banner-buttons
-          flex-direction: column
-          gap: 12px
-        .bottom-button
-          font-size: 16px
-          padding: 12px 28px
-        img
-          width: 160px
-
-  // Mobile portrait (≤414px)
-  @media screen and (max-width: 414px)
-    #thingsboard-edge
-      #hero
-        #hero-content
-          .edge-title
-            font-size: 22px
-          .edge-description
-            font-size: 13px
-            line-height: 18px
-            margin-bottom: 24px
-          .try-edge
-            font-size: 13px
-            line-height: 36px
-            padding: 0 12px
-    #encyclopedia
-      padding: 10px 10px
-      #intro
-        width: 100%
-        .stats-container
-          display: grid
-          grid-template-columns: repeat(2, 1fr)
-          gap: 12px
-        .stat-block
-          padding: 12px 4px
-          &:not(:last-child)::after
-            display: none
-        .stat-number
-          font-size: 26px
-          margin-bottom: 8px
-        .stat-label
-          font-size: 14px
-      #product
-        .product-title
-          font-size: 28px
-          margin-top: 20px
-          margin-bottom: 20px
-        .scenario-tabs
-          flex: none
-          width: 100%
-        .scenario-tab
-          padding: 16px 18px
-          font-size: 16px
-          .tab-header .tab-name
-            font-size: 18px
-          .tag
-            font-size: 13px
-            padding: 4px 10px
-        .scenario-wrapper
-          flex-direction: column
-          gap: 20px
-        .scenario-category
-          min-width: unset
-          width: 100%
-          div
-            padding: 24px 16px
-          img
-            max-width: 100%
-          .cta-button
-            font-size: 16px
-            padding: 10px 24px
-      #matrix
-        h2
-          font-size: 22px
-          margin-bottom: 16px
-        p
-          font-size: 14px
-          margin-bottom: 24px
-        table
-          width: 100%
-          thead
-            font-size: 9px
-            tr
-              height: 60px
-              th
-                font-size: 9px
-                padding: 12px 2px
+                width: 20%
+                padding: 0 0 2px
+                font-size: 16px
+              td
+                width: 40%
           tbody
             tr
-              height: 40px
               th, a
-                font-size: 9px
+                font-size: 14px
               td
-                font-size: 8px
+                font-size: 14px
                 img
-                  width: 18px
-      #authored-quote
-        margin-top: 80px
-        padding: 0 12px
-        main
-          display: flex
-          flex-direction: column
-          padding: 20px 16px
-          gap: 20px
-        img
-          width: 120px
-          height: 120px
-          margin: 0 auto
-          order: 1
-        .text
-          order: 2
-          border-left: none
-          padding-left: 0
-          padding-top: 20px
-          border-top: 4px solid #009688
-          text-align: center
-          h2
-            font-size: 18px
-          .quote
-            font-size: 14px
-          .author
-            font-size: 16px
-      #local-deployment, #data-filtering, #local-alarms, #batch-update
-        h2
-          font-size: 28px
-          margin: 40px 0 8px
-        .block
-          padding: 60px 0
-          .feature-des
-            padding-top: 20px
-          .block-img
-            img
-              max-width: 100%
-      #get-in-touch
-        padding: 40px 12px
-        .block
-          padding: 24px 16px
-          flex-direction: column
-          text-align: center
-          gap: 20px
-        .cta
-          font-size: 22px
-        .button
-          font-size: 16px
-          padding: 12px 28px
-      #bottom-features
-        padding: 40px 12px
-        h2
-          font-size: 28px
-          margin-bottom: 40px
-        .features-grid
-          grid-template-columns: 1fr
-          gap: 12px
-        .feature-header
-          padding: 16px 8px
-          gap: 8px
-        .feature-icon
-          width: 48px
-          height: 48px
-          flex: 0 0 48px
-          img
-            width: 36px
-            height: 36px
-        .feature-title
-          font-size: 16px
-        .feature-content
-          p
-            font-size: 16px
-            padding: 0 16px 16px
-      #bottom
-        padding: 40px 12px
-        .contact-us-banner
-          flex-direction: column
-          text-align: center
-          padding: 28px 20px
-          gap: 20px
-        .contact-us-banner-content
-          h2
-            font-size: 22px
-            margin-bottom: 20px
-        .contact-us-banner-buttons
-          justify-content: center
-        .bottom-button
-          font-size: 16px
-          padding: 12px 24px
-        img
-          width: 180px
-          flex: 0 0 auto
+                  width: 32px
