@@ -45,7 +45,8 @@
 
                             <div class="releases-table-content-item">
                                 {{ version | replace: "-", "." | replace: ".x", "" }}{% if docsPrefix == "pe/" %}PE
-                                {%- elsif docsPrefix == "edge/" or docsPrefix == "pe/edge/" -%}Edge
+                                {%- elsif docsPrefix == "edge/" -%}Edge
+                                {%- elsif docsPrefix == "pe/edge/" -%}PE Edge
                                 {%- endif -%}
                             </div>
 
