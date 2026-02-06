@@ -12,6 +12,5 @@ The product roadmap below covers only **major features** and does not include mi
 
 ## v4.4.0
 
-Includes all [Edge CE 4.4 features](/docs/edge/releases/roadmap/){: target="_blank"}, plus: 
-
+**Major** release that includes all [Edge CE 4.4 features](/docs/edge/releases/roadmap/){: target="_blank"}, plus: 
 * Solution templates with Edge computing integration

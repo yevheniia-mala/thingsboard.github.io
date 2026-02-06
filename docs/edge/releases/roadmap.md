@@ -13,6 +13,6 @@ View active development and bug fixes for the latest release [on our GitHub repo
 
 ## v4.4.0
 
-**Major** release with everything from [TB CE v4.3.0](/docs/releases/releases-table/v4-3-x/){: target="_blank"}:
+**Major** release with everything from **ThingsBoard CE**, plus:
 * ThingsBoard Runner - Docker service for installation and upgrade of Edge instances and IoT Gateway on remote machines from the ThingsBoard UI in one click.
 * Edge homepage - new section providing a centralized, at-a-glance overview of all Edge instances, including statistics, alarms, connection status, and uplink/downlink rates.
