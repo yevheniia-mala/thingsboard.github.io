@@ -45,32 +45,6 @@
         text-shadow: 0 0 18px rgba(0,0,0,.66)
       .try-edge
         cursor: pointer
-        line-height: 52px
-        font-size: 25px
-        padding: 0 28px
-        transition: all 0.3s ease
-        border: 2px solid white
-        color: white
-        &:hover
-          transform: scale(1.08)
-          background-color: rgba(255,255,255,0.15)
-        &:first-of-type
-          background-color: white
-          color: #009688
-          &:hover
-            transform: scale(1.08)
-            background-color: white
-            color: #009688
-            text-shadow: none
-        &:last-of-type
-          background-color: transparent
-          &:hover
-            transform: scale(1.05)
-            background-color: white
-            color: #009688
-            text-shadow: none
-      .learn-tb
-        cursor: pointer
         line-height: 40px
         font-size: 16px
         padding: 0 15px
@@ -80,8 +54,16 @@
         text-shadow: 0 0 18px rgba(0,0,0,.66)
         &:hover
           background-color: white
-          color: $dark-grey
+          color: #009688
           text-shadow: none
+        &.accent
+          background-color: white
+          color: #009688
+          text-shadow: none
+          &:hover
+            background-color: transparent
+            color: white
+            text-shadow: 0 0 18px rgba(0,0,0,.66)
       .paas-arrow
         position: fixed
         bottom: 40px
@@ -107,6 +89,8 @@
       position: relative
       transition-duration: 0.3s
       outline: none
+      & + a.read-more-button
+        margin-left: 60px
       .arrow
         transform: translate(0px)
         transition-duration: 0.3s
@@ -160,7 +144,7 @@
       font-size: 18px
 
     #intro
-      margin-bottom: 10px
+      margin-bottom: 100px
       padding-top: 25px
       color: #212924
       .stats-container
@@ -168,7 +152,7 @@
         justify-content: space-between
         align-items: center
         gap: 40px
-        max-width: 1500px
+        max-width: 1400px
         margin: 0 auto
       .stat-block
         flex: 1
@@ -190,7 +174,6 @@
         color: #009688
         line-height: 1
         margin-bottom: 12px
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Poppins, sans-serif
       .stat-label
         font-size: 18px
         font-weight: 500
@@ -198,14 +181,16 @@
         line-height: 1.4
 
     #product
-      #background
-        max-width: 1500px
+      max-width: 1400px
+      margin: 0 auto
+      padding: 0 20px 80px
+      .background
+        max-width: 1400px
         .small1
           top: -50px
       .product-title
         text-align: center
-        margin-top: 30px
-        margin-bottom: 30px
+        margin-bottom: 68px
         font-size: 42px
         font-weight: 600
         color: #212529
@@ -215,7 +200,7 @@
         gap: 40px
         align-items: flex-start
       .scenario-tabs
-        flex: 0 0 520px
+        flex: 0 0 380px
         display: flex
         flex-direction: column
         gap: 12px
@@ -244,7 +229,7 @@
           .tag
             color: #009688
             border: 1px solid #009688
-            background: transparent
+            background: white
             font-size: 16px
             font-weight: 400
           p
@@ -288,18 +273,54 @@
       .scenario-category
         display: none
         flex: 1
-        min-width: 1000px
+        min-width: 0
         &.active
-          display: block
-        div
+          display: flex
+          align-items: center
+        > div
           background: transparent
           padding: 48px
-        img
-          display: block
-          max-width: 100%
-          height: auto
-          margin: 0 auto 32px
-          border-radius: 8px
+          width: 100%
+          min-height: 500px
+          display: flex
+          flex-direction: column
+          justify-content: center
+        .image-container
+          width: 100%
+          position: relative
+          margin-bottom: 32px
+          .image-background
+            position: absolute
+            width: 100%
+            height: 100%
+            border-radius: 24px
+            &:nth-of-type(1)
+              right: -42px
+              top: -72px
+              z-index: -3
+              background-color: #EFFAF9
+            &:nth-of-type(2)
+              left: -47px
+              top: -35px
+              border: 1.5px solid #B2DFDB
+              z-index: -2
+            &:nth-of-type(3)
+              bottom: -37px
+              right: -65px
+              border: 1.5px solid #009688
+              z-index: -1
+          .image
+            img
+              display: block
+              max-width: 100%
+              max-height: 550px
+              width: auto
+              height: auto
+              margin: 0 auto
+              border-radius: 24px
+              border: 1px solid #009688
+              padding: 8px
+              background-color: white
         .cta-button
           display: block
           width: fit-content
@@ -320,126 +341,122 @@
             transform: translateY(-2px)
 
     #matrix
-      margin: 40px -100% 0
-      padding: 0 100% 88px
+      max-width: 1400px
+      margin: 0 auto
+      padding: 60px 20px 88px
+      position: relative
+      .main-content
+        position: relative
       h2
         text-align: center
-        margin-bottom: 35px
+        margin-bottom: 48px
         font-size: 42px
         font-weight: 600
         color: #212529
-      #backg-matrix
-        position: relative
-        margin-left: -20px
-        margin-right: -20px
-        width: calc(100% + 40px)
-        .gateway, .edge, .cloud
-          padding: 0 2px
-          width: 20%
-          position: absolute
-          z-index: -1
-          top: 100px
-        .coln
-          height: 840px
-          border-radius: 6px
-        .gateway
-          right: 40%
-          .coln
-            border: 2px solid #7A4DC3
-            box-shadow: 0 50px 50px -20px rgba(0,0,0,0.15), 0 0 30px 0 rgba(0,0,0,0.10)
-            .head
-              height: 106px
-              background-color: #7A4DC3
-        .edge
-          right: 20%
-          .coln
-            border: 2px solid #009688
-            box-shadow: 0 50px 50px -20px rgba(0,0,0,0.15), 0 0 30px 0 rgba(0,0,0,0.10)
-            .head
-              height: 106px
-              background-color: #009688
-        .cloud
-          right: 0
-          .coln
-            border: 2px solid #2A7DEC
-            box-shadow: 0 50px 50px -20px rgba(0,0,0,0.15), 0 0 30px 0 rgba(0,0,0,0.10)
-            .head
-              height: 106px
-              background-color: #2A7DEC
       table
-        width: calc(100% + 40px)
-        margin: 64px -20px 16px
+        width: 100%
+        border-collapse: separate
+        border-spacing: 16px 0
+        table-layout: fixed
         border: none
-        top: 40px
-        td, th
-          margin: 0 2px
-          padding: 2px
-          align-content: center
-          &:nth-child(3n)
-            color: #009688
-            img
-              filter: invert(40%) sepia(88%) saturate(245%) hue-rotate(129deg) brightness(91%) contrast(103%)
-          &:nth-child(2n)
-            color: #7A4DC3
-            img
-              filter: invert(43%) sepia(48%) saturate(952%) hue-rotate(223deg) brightness(78%) contrast(96%)
-          &:nth-child(4n)
-            color: #2A7DEC
-            img
-              filter: invert(32%) sepia(100%) saturate(700%) hue-rotate(207deg) brightness(100%) contrast(102%)
+        .col-feature
+          width: 40%
+        .col-gateway, .col-edge, .col-server
+          width: 20%
         thead
-          color: #212529
-          font-size: 16px
-          line-height: 30px
-          background-color: unset
-          tr
-            height: 110px
-            th
-              width: 20%
-              text-align: center
-              vertical-align: middle
-              font-weight: 600
-              font-size: 20px
-              padding: 0 0 50px
-              &:nth-child(1n)
-                color: white
-              a
-                text-decoration: none
-                transition: color 0.2s ease
-                &:hover
-                  text-decoration: underline
-            td
-              width: 40%
+          background: white
+        thead td
+          border: none
+          background: transparent
+        thead th
+          padding: 20px 12px
+          text-align: center
+          vertical-align: middle
+          font-weight: 600
+          font-size: 18px
+          line-height: 1.3
+          color: white
+          border: none
+          &.gateway
+            background: #7A4DC3
+            border-radius: 12px 12px 0 0
+            box-shadow: 0 -2px 8px rgba(122, 77, 195, 0.15)
+          &.edge
+            background: #009688
+            border-radius: 12px 12px 0 0
+            box-shadow: 0 -2px 8px rgba(0, 150, 136, 0.15)
+          &.server
+            background: #2A7DEC
+            border-radius: 12px 12px 0 0
+            box-shadow: 0 -2px 8px rgba(42, 125, 236, 0.15)
         tbody
-          tr
-            background-color: unset
-            height: 64px
-            th, a
-              font-weight: 600
-              font-size: 18px
-              padding-right: 5px
+          th
+            font-weight: 600
+            font-size: 16px
+            line-height: 1.4
+            padding: 16px 12px 16px 0
+            color: #212529
+            text-align: left
+            border: none
+            background: white
+            a
               color: #212529
-              img
-                vertical-align: top
-            td
-              text-align: center
               font-weight: 600
-              font-size: 18px
+              font-size: 16px
+              &:hover
+                color: #009688
+          td
+            text-align: center
+            vertical-align: middle
+            font-weight: 600
+            font-size: 15px
+            padding: 16px 8px
+            background: white
+            border: none
+            &:nth-child(2)
+              color: #7A4DC3
+              border-left: 2px solid #7A4DC3
+              border-right: 2px solid #7A4DC3
               img
-                width: 32px
+                filter: invert(43%) sepia(48%) saturate(952%) hue-rotate(223deg) brightness(78%) contrast(96%)
+            &:nth-child(3)
+              color: #009688
+              border-left: 2px solid #009688
+              border-right: 2px solid #009688
+              img
+                filter: invert(40%) sepia(88%) saturate(245%) hue-rotate(129deg) brightness(91%) contrast(103%)
+            &:nth-child(4)
+              color: #2A7DEC
+              border-left: 2px solid #2A7DEC
+              border-right: 2px solid #2A7DEC
+              img
+                filter: invert(32%) sepia(100%) saturate(700%) hue-rotate(207deg) brightness(100%) contrast(102%)
+            img
+              width: 28px
+              vertical-align: middle
+          tr:last-child td
+            &:nth-child(2)
+              border-bottom: 3px solid #7A4DC3
+              border-radius: 0 0 12px 12px
+            &:nth-child(3)
+              border-bottom: 3px solid #009688
+              border-radius: 0 0 12px 12px
+            &:nth-child(4)
+              border-bottom: 3px solid #2A7DEC
+              border-radius: 0 0 12px 12px
 
     #authored-quote
       margin-top: 150px
       padding: 20px 20px
-      #background
+      .background
         .main1
           top: -150px
         .small3
           top: -300px
         .small4
           top: -90px
-      main
-        max-width: 1500px
+      .main-content
+        max-width: 1400px
         margin: 0 auto
         background: white
         border: 2px solid #E8EBF0
@@ -489,14 +506,14 @@
     #get-in-touch
       padding: 60px 20px
       position: relative
-      main
-        max-width: 1500px
+      .main-content
+        max-width: 1400px
         margin: 0 auto
         position: relative
         opacity: 0
         transform: translateY(50px)
         animation: slideUp 0.8s ease-out forwards
-      #background
+      .background
         position: absolute
         top: 0
         left: 0
@@ -535,12 +552,11 @@
           box-shadow: 0 4px 12px rgba(0,150,136,0.4)
 
     #local-deployment, #data-filtering, #local-alarms, #batch-update
-      max-width: 1920px
+      max-width: 1400px
       margin: 0 auto
-      padding: 0 100px
       h2
         text-align: center
-        margin: 60px 0 10px
+        margin: 60px 0 48px
         font-size: 42px
         font-weight: 600
         color: #212529
@@ -563,7 +579,7 @@
             width: 100%
             max-width: 100%
             height: auto
-      #background
+      .background
         .main2
           height: 700px
         .small7
@@ -580,12 +596,12 @@
       padding-top: 100px
 
     #data-filtering .block
-      padding: 60px 0
+      padding: 230px 0 100px
 
     #local-alarms
       .block
         position: relative
-      #background
+      .background
         position: absolute
         top: 0
         left: 50%
@@ -601,23 +617,25 @@
           filter: brightness(100%) invert(100%)
 
     #batch-update .block
-      padding: 80px 0 120px
+      padding: 180px 0
 
     #bottom-features
       padding: 20px 20px
-      main
-        max-width: 1500px
+      .main-content
+        max-width: 1400px
         margin: 0 auto
         position: relative
       h2
         text-align: center
-        margin-bottom: 60px
+        margin-bottom: 48px
         font-size: 42px
         font-weight: 600
         color: #212529
       .features-grid
         display: grid
         grid-template-columns: repeat(3, 1fr)
+        grid-auto-rows: min-content
+        align-items: start
         gap: 24px
       .feature-card
         background: white
@@ -646,8 +664,6 @@
         padding: 24px
         cursor: pointer
         transition: background 0.2s ease
-        &:hover
-          background: #F8F9FA
       .feature-icon
         flex: 0 0 68px
         width: 68px
@@ -674,17 +690,18 @@
         max-height: 0
         overflow: hidden
         opacity: 0
-        transition: all 0.4s ease
+        padding: 0 24px
+        transition: max-height 0.4s ease, opacity 0.4s ease, padding-bottom 0.4s ease
         p
-          font-size: 18px
-          line-height: 1.6
+          font-size: 16px
+          line-height: 24px
           color: #3D3D3D
           margin: 0
 
     #bottom
       padding: 80px 20px
       .contact-us-banner
-        max-width: 1500px
+        max-width: 1400px
         margin: 0 auto
         background: white
         border: 2px solid #009688
@@ -733,7 +750,7 @@
         -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%)
         mask-image: linear-gradient(to bottom, black 0%, transparent 100%)
 
-    #background
+    .background
       z-index: -1
       position: absolute
       left: 50%
@@ -746,7 +763,7 @@
         &.main1
           top: 8px
           width: 2560px
-          height: 525px
+          height: 627px
           left: -1280px
           background-color: #EFFAF9
         &.small1
@@ -786,7 +803,7 @@
         &.main3
           top: -108px
           width: 2560px
-          height: 525px
+          height: 848px
           left: -1280px
           background-color: #EFFAF9
         &.small8
@@ -858,44 +875,26 @@
           width: 100%
           &.active
             display: block
-          div
+          > div
             padding: 24px
-          img
+            min-height: auto
+          .image-container
             margin-bottom: 24px
+            .image-background
+              &:nth-of-type(1)
+                right: -24px
+                top: -40px
+              &:nth-of-type(2)
+                left: -26px
+                top: -20px
+              &:nth-of-type(3)
+                bottom: -20px
+                right: -36px
           .cta-button
             font-size: 18px
             padding: 10px 28px
-      #matrix
-        h2
-          font-size: 42px
-          line-height: 63px
-        #backg-matrix
-          .gateway, .edge, .cloud
-            padding: 0 20px
-            top: 140px
-            vertical-align: middle
-            width: 20%
-        table
-          thead
-            tr
-              th
-                vertical-align: middle
-                width: 20%
-                padding: 0 0 10px
-                font-size: 20px
-              td
-                width: 40%
-            tbody
-              tr
-                th, a
-                  padding-right: 30px
-                  font-size: 20px
-                td
-                  font-size: 20px
-                img
-                  width: unset
       #local-alarms
-        #background
+        .background
           .main2
             height: 500px
 
@@ -926,46 +925,39 @@
           width: 100%
           &.active
             display: block
-          div
+          > div
             padding: 24px
-          img
+            min-height: auto
+          .image-container
             margin-bottom: 24px
+            .image-background
+              &:nth-of-type(1)
+                right: -24px
+                top: -40px
+              &:nth-of-type(2)
+                left: -26px
+                top: -20px
+              &:nth-of-type(3)
+                bottom: -20px
+                right: -36px
           .cta-button
             font-size: 18px
             padding: 10px 28px
-      #matrix
-        h2
-          font-size: 42px
-          line-height: 63px
-        #backg-matrix
-          .gateway, .edge, .cloud
-            padding: 0 20px
-            top: 130px
-            vertical-align: middle
-            width: 20%
-        table
-          thead
-            tr
-              th
-                vertical-align: middle
-                width: 20%
-                padding: 0 0 10px
-                font-size: 18px
-              td
-                width: 40%
-            tbody
-              tr
-                th, a
-                  padding-right: 30px
-                  font-size: 18px
-                td
-                  font-size: 20px
-                img
-                  width: unset
       #local-alarms
-        #background
+        .background
           .main2
             height: 500px
+
+  @media screen and (max-width: 1000px)
+    #edgeContent
+      #bottom-features
+        .features-grid
+          grid-template-columns: 1fr
+        .feature-card
+          &:last-child:nth-child(odd)
+            grid-column: auto
+            max-width: none
+            margin: 0
 
   @media screen and (min-width: 750px)
     #hero
@@ -975,41 +967,16 @@
         .edge-description
           font-size: 26px
           margin-bottom: 60px
+        .try-edge
+          line-height: 60px
+          font-size: 28px
+          padding: 0 40px
+          border-width: 3px
     #edgeContent
       #local-deployment, #data-filtering, #local-alarms, #batch-update
         .block
           .feature-des, .block-img
             width: 80%
-    #matrix
-      h2
-        font-size: 42px
-        line-height: 63px
-      #backg-matrix
-        .gateway, .edge, .cloud
-          padding: 0 20px
-          top: 130px
-          vertical-align: middle
-          width: 20%
-      table
-        thead
-          tr
-            th
-              vertical-align: middle
-              width: 20%
-              padding: 0 0 10px
-              font-size: 20px
-            td
-              width: 40%
-      tbody
-        tr
-          th, a
-            padding-right: 30px
-            font-size: 18px
-          td
-            font-size: 20px
-          img
-            width: unset
-
   @media screen and (max-width: 750px)
     #thingsboard-edge
       #hero
@@ -1073,54 +1040,50 @@
           width: 100%
           &.active
             display: block
-          div
+          > div
             padding: 24px
-          img
+            min-height: auto
+          .image-container
             margin-bottom: 24px
+            .image-background
+              &:nth-of-type(1)
+                right: -16px
+                top: -28px
+              &:nth-of-type(2)
+                left: -18px
+                top: -14px
+              &:nth-of-type(3)
+                bottom: -14px
+                right: -24px
           .cta-button
             font-size: 18px
             padding: 10px 28px
       #matrix
-        margin: 40px 0 0
-        padding: 0 20px 88px
+        padding: 40px 12px 60px
         h2
           font-size: 26px
           line-height: 38px
-          margin-bottom: 65px
-        #backg-matrix
-          margin: 0
-          width: 100%
-          .gateway, .edge, .cloud
-            top: 110px
-            width: 20%
-            vertical-align: middle
+          margin-bottom: 24px
         table
-          width: 100%
-          margin: 40px 0 16px
-          table-layout: fixed
-          thead
-            tr
-              th
-                width: 20%
-                padding: 0 2px 2px
-                font-size: 16px
-                vertical-align: middle
-              td
-                width: 40%
+          border-spacing: 10px 0
+          thead th
+            padding: 12px 4px
+            font-size: 13px
           tbody
-            tr
-              th, a
-                font-size: 16px
-                padding-right: 4px
-              td
-                padding: 6px 2px
-                font-size: 14px
-                img
-                  width: 28px
+            th
+              font-size: 13px
+              padding: 10px 6px 10px 0
+              a
+                font-size: 13px
+            td
+              font-size: 12px
+              padding: 10px 4px
+              img
+                width: 22px
       #authored-quote
         margin-top: 80px
         padding: 20px 16px
-        main
+        .main-content
           display: flex
           flex-direction: column
           gap: 16px
@@ -1144,7 +1107,7 @@
           .author
             font-size: 16px
       #local-alarms
-        #background
+        .background
           .main2
             top: 0
             height: 100%
@@ -1173,13 +1136,6 @@
         h2
           font-size: 28px
           margin-bottom: 36px
-        .features-grid
-          grid-template-columns: 1fr
-        .feature-card
-          &:last-child:nth-child(odd)
-            grid-column: auto
-            max-width: none
-            margin: 0
         .feature-header
           padding: 18px 16px
         .feature-icon
@@ -1238,44 +1194,48 @@
       padding: 0 10px
       #intro
         padding-top: 20px
-          margin-bottom: 32px
+        margin-bottom: 32px
         .stats-container
           display: grid
           grid-template-columns: repeat(2, 1fr)
           gap: 16px
         .stat-block
           padding: 8px 2px
+          &:not(:last-child)::after
+            display: none
         .stat-number
           font-size: 36px
           margin-bottom: 8px
         .stat-label
           font-size: 18px
       #matrix
+        padding: 20px 6px 40px
         h2
-          font-size: 26px
-          line-height: 38px
-          margin-bottom: -10px
-        #backg-matrix
-          .gateway, .edge, .cloud
-            top: 90px
-            width: 20%
+          font-size: 20px
+          line-height: 28px
+          margin-bottom: 16px
         table
-          width: 100%
-          height: 100%
-          thead
-            tr
-              th
-                width: 20%
-                padding: 0 0 2px
-                font-size: 14px
-                vertical-align: middle
-              td
-                width: 40%
+          border-spacing: 6px 0
+          .col-feature
+            width: 34%
+          .col-gateway, .col-edge, .col-server
+            width: 22%
+          thead th
+            padding: 10px 3px
+            font-size: 10px
+            border-radius: 8px 8px 0 0
           tbody
-            tr
-              th, a
-                font-size: 14px
-              td
-                font-size: 14px
-                img
-                  width: 28px
+            th
+              font-size: 11px
+              padding: 8px 4px 8px 0
+              a
+                font-size: 11px
+            td
+              font-size: 10px
+              padding: 8px 2px
+              border-left-width: 1px
+              border-right-width: 1px
+              img
+                width: 18px
+            tr:last-child td
+              border-bottom-width: 2px

@@ -5,7 +5,6 @@ description: Comprehensive software solutions for edge computing, providing data
 ---
 
 <section id="intro">
-    <main>
         <div class="stats-container">
             <div class="stat-block">
                 <div class="stat-number">5</div>
@@ -24,12 +23,10 @@ description: Comprehensive software solutions for edge computing, providing data
                 <div class="stat-label">Data processed on-site</div>
             </div>
         </div>
-	</main>
 </section>
 
 <section id="product">
-    <main>
-        <div id="background">
+        <div class="background">
            <div class="small1"></div><div class="small3"></div>
         </div>
     <h2 class="product-title">IoT Architecture Comparison</h2>
@@ -84,44 +81,59 @@ description: Comprehensive software solutions for edge computing, providing data
         </div>
         <div id="scenario-cat-gateway" class="scenario-category">
             <div>
-                <img src="/images/edge/tb-edge-gw.webp" alt="ThingsBoard Gateway block" width="615" height="719" loading="lazy">
+                <div class="image-container">
+                    <div class="image-background"></div>
+                    <div class="image-background"></div>
+                    <div class="image">
+                        <img src="/images/edge/tb-edge-gw.webp" alt="ThingsBoard Gateway block" width="615" height="719" loading="lazy">
+                    </div>
+                </div>
                 <a href="/docs/iot-gateway/getting-started/" target="_blank" class="cta-button gtm_button">Connect Your Devices</a>
             </div>
         </div>
         <div id="scenario-cat-edge" class="scenario-category active">
             <div>
-                <img src="/images/edge/tb-edge.webp" alt="ThingsBoard Edge block" loading="lazy">
+                <div class="image-container">
+                    <div class="image-background"></div>
+                    <div class="image-background"></div>
+                    <div class="image">
+                        <img src="/images/edge/tb-edge.webp" alt="ThingsBoard Edge block" loading="lazy">
+                    </div>
+                </div>
                 <a href="/docs/edge/getting-started/" target="_blank" class="cta-button gtm_button">Try Edge Now</a>
             </div>
         </div>
         <div id="scenario-cat-server" class="scenario-category">
             <div>
-                <img src="/images/edge/tb-cloud.webp" alt="ThingsBoard Cloud block" loading="lazy">
+                <div class="image-container">
+                    <div class="image-background"></div>
+                    <div class="image-background"></div>
+                    <div class="image">
+                        <img src="/images/edge/tb-cloud.webp" alt="ThingsBoard Cloud block" loading="lazy">
+                    </div>
+                </div>
                 <a href="/docs/getting-started-guides/helloworld/" target="_blank" class="cta-button gtm_button">Get Started</a>
             </div>
         </div>
     </div>
-    </main>
 </section>
 
 <section id="matrix">
-    <main>
-        <div id="background">
-            <div class="small1"></div><div class="small2"></div><div class="small6"></div>
-        </div>
-    <div id="backg-matrix">
-        <div class="cloud"><div class="coln"><div class="head"></div></div></div>
-        <div class="edge"><div class="coln"><div class="head"></div></div></div>
-        <div class="gateway"><div class="coln"><div class="head"></div></div></div>
-    </div>
+    <div class="main-content">
     <h2>Which ThingsBoard Product Is Right for You?</h2>
     <table>
+            <colgroup>
+                <col class="col-feature">
+                <col class="col-gateway">
+                <col class="col-edge">
+                <col class="col-server">
+            </colgroup>
             <thead>
                 <tr>
                     <td></td>
-                    <th>IoT<br>Gateway</th>
-                    <th>ThingsBoard<br>Edge</th>
-                    <th>ThingsBoard<br>Server</th>
+                    <th class="gateway">IoT<br>Gateway</th>
+                    <th class="edge">ThingsBoard<br>Edge</th>
+                    <th class="server">ThingsBoard<br>Server</th>
                 </tr>
             </thead>
             <tbody>
@@ -193,53 +205,50 @@ description: Comprehensive software solutions for edge computing, providing data
                 </tr>
             </tbody>
     </table>
-    </main>
+    </div>
 </section>
 
 <section id="authored-quote">
-    <div id="background">
+    <div class="background">
         <div class="main1"></div><div class="small3"></div><div class="small4"></div>
     </div>
-    <main>
+    <div class="main-content">
         <img class="h-auto" src="/images/case-studies/Dominic_Winkler.webp" title="ÖBB-Infrastruktur AG IT Enterprise Architect Dominic Winkler" alt="Dominic Winkler" width="1316" height="848">
         <div class="text">
             <h2>ÖBB-Infrastruktur AG</h2>
-            <p class="quote">“Thingsboard Edge gives us the invaluable ability to allow data to flow within our IT network without the need to bridge Firewalls and Public Internet.”</p>
+            <p class="quote">"Thingsboard Edge gives us the invaluable ability to allow data to flow within our IT network without the need to bridge Firewalls and Public Internet."</p>
             <p class="author">Dominic Winkler</p>
             <p class="title">IT Enterprise Architect</p>
         </div>
-    </main>
+    </div>
 </section>
 
 <section id="get-in-touch">
-    <main>
+    <div class="main-content">
         <div class="block">
             <h2 class="cta">Need offline-capable IoT solution?</h2>
             <a id="Lets-Talk-Edge" href="/docs/contact-us/?subject=ThingsBoard%20Products" target="_blank"
                class="button contact-us gtm_button">Let's talk Edge</a>
         </div>
-    </main>
+    </div>
 </section>
 
 <section id="local-deployment">
-    <main>
         <h2>Edge Key Features</h2>
         <div class="block">
             <div class="feature-des"><h3 class="item-heading">Local Deployment and Storage</h3>
                 <p>Process and store data from local (edge) devices independently of the server. Sync updates with the server once connectivity is restored.</p>
                 <a class="read-more-button" href="/docs/edge/getting-started-guides/what-is-edge/">Edge CE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
-                <a class="read-more-button" style="margin-left: 60px;" href="/docs/pe/edge/getting-started-guides/what-is-edge/">Edge PE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
+                <a class="read-more-button" href="/docs/pe/edge/getting-started-guides/what-is-edge/">Edge PE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
             </div>
             <div class="block-img">
                 <img src="/images/edge/local-deployment.svg" alt="local deployment">
             </div>
         </div>
-    </main>
 </section>
 
 <section id="data-filtering">
-    <main>
-        <div id="background">
+        <div class="background">
             <div class="main1"></div><div class="small1"></div><div class="small2"></div><div class="small3"></div>
         </div>
         <div class="block">
@@ -249,32 +258,28 @@ description: Comprehensive software solutions for edge computing, providing data
             <div class="feature-des"><h3 class="item-heading">Data Filtering</h3>
                 <p>Use the ThingsBoard Edge service to filter data from local (edge) devices and forward only a subset of data to the server for further processing or storage.</p>
                 <a class="read-more-button" href="/docs/edge/getting-started-guides/what-is-edge/">Edge CE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
-                <a class="read-more-button" style="margin-left: 60px;" href="/docs/pe/edge/getting-started-guides/what-is-edge/">Edge PE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
+                <a class="read-more-button" href="/docs/pe/edge/getting-started-guides/what-is-edge/">Edge PE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
             </div>
         </div>
-    </main>
 </section>
 
 <section id="local-alarms">
-    <main>
-        <div id="background">
+        <div class="background">
             <div class="main2"></div><div class="small5"></div><div class="small6"></div><div class="small7"></div>
         </div>
         <div class="block">
             <div class="feature-des"><h3 class="item-heading">Local Alarms</h3>
                 <p>Respond instantly to critical situations on-site, even without connectivity to server.</p>
                 <a class="read-more-button" href="/docs/edge/getting-started-guides/what-is-edge/">Edge CE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
-                <a class="read-more-button" style="margin-left: 60px;" href="/docs/pe/edge/getting-started-guides/what-is-edge/">Edge PE<img class="arrow first" src="/images/pe/read-more-arrow.svg"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
+                <a class="read-more-button" href="/docs/pe/edge/getting-started-guides/what-is-edge/">Edge PE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
             </div>
             <div class="block-img">
                 <img src="/images/edge/local-alarms.svg" alt="local alarms">
             </div>
         </div>
-    </main>
 </section>
 
 <section id="batch-update">
-    <main>
         <div class="block">
             <div class="block-img">
                 <img src="/images/edge/batch-update.svg" alt="batch update">
@@ -282,15 +287,14 @@ description: Comprehensive software solutions for edge computing, providing data
             <div class="feature-des"><h3 class="item-heading">Batch Update and Visualization</h3>
                 <p>Update thousands of edge configurations with a single click. Monitor local events and time series data using a real-time dashboard.</p>
                 <a class="read-more-button" href="/docs/edge/getting-started-guides/what-is-edge/">Edge CE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
-                <a class="read-more-button" style="margin-left: 60px;" href="/docs/pe/edge/getting-started-guides/what-is-edge/">Edge PE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
+                <a class="read-more-button" href="/docs/pe/edge/getting-started-guides/what-is-edge/">Edge PE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
             </div>
         </div>
-    </main>
 </section>
 
 <section id="bottom-features">
-    <main>
-        <div id="background">
+    <div class="main-content">
+        <div class="background">
             <div class="main3"></div><div class="small8"></div>
         </div>
         <h2>Why Edge Works</h2>
@@ -422,7 +426,7 @@ description: Comprehensive software solutions for edge computing, providing data
                 </div>
             </div>
         </div>
-    </main>
+    </div>
 </section>
 
 <section id="bottom">
@@ -458,7 +462,7 @@ function toggleFeature(headerElement) {
   var allCards = document.querySelectorAll('.feature-card');
   var cardsArray = Array.from(allCards);
 
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 1000) {
     allCards.forEach(function(c) {
       if (c !== card) {
         c.classList.remove('open');
