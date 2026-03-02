@@ -3,6 +3,7 @@
 To ensure data integrity during the upgrade, back up your ThingsBoard Edge data.
 
 ### Stop the Edge service
+{:.no_toc}
 
 ```text
 net stop tb-edge
@@ -10,6 +11,7 @@ net stop tb-edge
 {: .copy-code}
 
 ### Back up the database
+{:.no_toc}
 
 1. Launch **pgAdmin** and log in as the **postgres** superuser.
 2. In the left sidebar, expand your server and locate the **tb_edge** database.

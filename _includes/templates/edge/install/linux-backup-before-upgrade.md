@@ -3,6 +3,7 @@
 To ensure data integrity during the upgrade, back up your ThingsBoard Edge data.
 
 ### Stop the Edge service
+{:.no_toc}
 
 Stop the ThingsBoard Edge service to prevent data writes during the upgrade:
 
@@ -12,6 +13,7 @@ sudo systemctl stop tb-edge
 {: .copy-code}
 
 ### Back up the database
+{:.no_toc}
 
 Create a database backup before upgrading to avoid potential data loss.
 
@@ -49,5 +51,6 @@ ls -lh tb_edge.sql.bak
 {: .copy-code}
 
 ### Restore the backup (if needed)
+{:.no_toc}
 
 {% include templates/edge/user-guide/backup/ubuntu-restore-backup.md %}
