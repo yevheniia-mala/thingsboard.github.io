@@ -1,38 +1,14 @@
-## Prepare for upgrading ThingsBoard Edge
-
-To ensure data integrity during the upgrade, back up your ThingsBoard Edge data.
-
-### Stop the Edge service
-{:.no_toc}
-
-Stop the ThingsBoard Edge service to prevent data writes during the upgrade:
-
-```bash
-sudo systemctl stop tb-edge
-```
-{: .copy-code}
-
-### Back up the database
-{:.no_toc}
-
-Create a database backup before upgrading to avoid potential data loss.
+## Backup before upgrading
 
 {% capture check-space %}
 Make sure your system has enough free space to store the backup.
 {% endcapture %}
 {% include templates/info-banner.md content=check-space %}
 
-Check the current database size:
+Stop the ThingsBoard Edge service to prevent data writes during the upgrade:
 
 ```bash
-sudo -u postgres psql -c "SELECT pg_size_pretty( pg_database_size('tb_edge') );"
-```
-{: .copy-code}
-
-Check available disk space:
-
-```bash
-df -h /
+sudo systemctl stop tb-edge
 ```
 {: .copy-code}
 
@@ -51,6 +27,5 @@ ls -lh tb_edge.sql.bak
 {: .copy-code}
 
 ### Restore the backup (if needed)
-{:.no_toc}
 
 {% include templates/edge/user-guide/backup/ubuntu-restore-backup.md %}
